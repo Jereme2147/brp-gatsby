@@ -1,0 +1,34 @@
+@import './reset.scss';
+.menuDiv {
+    position: fixed;
+    z-index: 99;
+    top: 175px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $blue;
+   
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        // height: 50vh;
+        color: $grey;
+        list-style-type: none;
+        li {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            a{
+                color: $white;
+                font-size: 2.5rem;
+                text-decoration: none;
+                font-family: $menu;
+                // padding: 10px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import "./reset.scss";
+
+.bannerImage {
+    position: relative;
+    // height: 500px;
+    // z-index: 5;
+    @include desktop() {
+        // top: 200px;
+    }
+}

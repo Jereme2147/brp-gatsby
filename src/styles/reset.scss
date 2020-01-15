@@ -1,0 +1,56 @@
+// Used for colors / reset / fonts
+$red: rgba(163, 22, 33, 1);
+$white: rgba(252, 247, 248, 1);
+$grey: rgba(206, 211, 220, 1);
+$blue: rgba(78, 128, 152, 1);
+$black: rgba(54, 54, 54, 1);
+// $title: 'Alatsi', sans-serif;
+// $menu: 'Hind Madurai', sans-serif;
+// $body: 'Rasa', serif;
+$title: sans-serif;
+$menu: sans-serif;
+$body: serif;
+@mixin desktop {
+    @media (min-width: 950px) {
+        // @media (min-width: 1061px) {
+        @content;
+    }
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+button {
+    &:focus {
+        outline: 0;
+    }
+}
+h1 {
+    font-family: 'Muli', sans-serif;
+}
+h2 {
+    font-family: 'Jaldi', sans-serif;
+}
+h3,h4,h5,h6,p {
+    font-family: 'Molengo', sans-serif;
+}

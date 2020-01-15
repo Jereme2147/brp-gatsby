@@ -1,0 +1,44 @@
+@import "./reset.scss";
+//styles for phone number and Menu list
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include desktop() {
+        width: 40%;
+    }
+    h1 {
+        color: $white;
+        text-shadow: 2px 1px 1px $red;
+        font-size: 1.5rem;
+        @include desktop() {
+            font-size: 2.5rem;
+            font-weight: 500;
+            height: 50%;
+        }
+    }
+
+}
+.links {
+    display: none;
+    @include desktop() {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+        justify-content: space-evenly;
+        a {
+            text-decoration: none;
+            color: $white;
+            text-shadow: 2px 1px 1px $black;
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+            
+        }
+    }
+}

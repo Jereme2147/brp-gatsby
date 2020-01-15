@@ -1,0 +1,109 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+button:focus {
+  outline: 0;
+}
+
+h1 {
+  font-family: 'Muli', sans-serif;
+}
+
+h2 {
+  font-family: 'Jaldi', sans-serif;
+}
+
+h3, h4, h5, h6, p {
+  font-family: 'Molengo', sans-serif;
+}
+
+.quickNav {
+  position: fixed;
+  z-index: 9;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("../../static/banner.jpg");
+  width: 100vw;
+  height: 50px;
+}
+
+@media (min-width: 950px) {
+  .quickNav {
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+.quickNav button {
+  background: #a31621;
+  height: 75%;
+  width: 48%;
+  border-radius: 5px;
+  border-width: 1px;
+  border-top-color: #fcf7f8;
+  border-left-color: #fcf7f8;
+  border-right-color: #fcf7f8;
+  border-bottom-color: #fcf7f8;
+  transition: 0.4s;
+}
+
+.quickNav button a {
+  color: #fcf7f8;
+  text-decoration: none;
+}
+
+.quickNav button a h2 {
+  font-size: 1rem;
+}
+
+@media (min-width: 950px) {
+  .quickNav button {
+    background: none;
+    width: 30%;
+    border-width: 2px;
+    border-top-color: #fcf7f8;
+    border-left-color: #fcf7f8;
+    border-right-color: #fcf7f8;
+    border-bottom-color: #fcf7f8;
+    box-shadow: 2px 2px #363636;
+  }
+  .quickNav button a {
+    color: #a31621;
+  }
+  .quickNav button a h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
+.quickNav button:hover {
+  background-color: #fcf7f8;
+}

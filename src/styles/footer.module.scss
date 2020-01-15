@@ -1,0 +1,110 @@
+@import "./reset.scss";
+
+
+.footerContainer {
+    // height: 30%;
+    width: 100vw;
+    background-color: $blue;
+    justify-self: flex-end;
+    // top: 90vh;  // this is a problem.  Should be fine after content
+    position: relative;
+}
+.phone {
+    width: 100%;
+    text-align: center;
+    color: $white;
+    text-shadow: 2px 2px 2px $black;
+    font-size: 2rem;
+    border-bottom: 2px solid $grey;
+    padding: 10px;
+    @include desktop(){
+        font-size: 2.5rem;
+    }
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 1px $black;
+    border-bottom: 2px solid $grey;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: 1.3rem;
+    @include desktop() {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.5rem;
+    }
+}
+.socialAndLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.social {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+        // border-right: 2px solid $grey;
+        font-size: 2rem;
+        padding: 10px;
+        a {
+            color: $grey;
+            transition: 0.4s;
+            &:hover {
+                color: $red;
+            }
+        }
+        @include desktop() {
+            flex-direction: row;
+            font-size: 3rem;
+        }
+}
+.links {
+        display: flex;
+        // flex-direction: column;
+        font-size: 2rem;
+        padding: 10px;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        ul {
+            list-style-type: none;
+            @include desktop() {
+                display: flex;
+                flex-direction: row;
+                li {
+                    padding: 0 10px;
+                }
+                a {
+                    transition: 0.4s;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                color: $white;
+                h2 {
+                    text-shadow: 2px 2px 2px $black;
+                }
+            }
+        }
+    @include desktop() {
+
+    }
+}
+.dev {
+    color: $white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    font-size: 1.3rem;
+    
+}

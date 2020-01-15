@@ -1,0 +1,63 @@
+@import "reset.scss";
+
+.quickNav {
+    // background-image: url("../media/banner.png");
+    position: fixed;
+    z-index: 9;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../../static/banner.jpg");
+    width: 100vw;
+    height: 50px;
+    @include desktop(){
+        width: 100vw;
+        height: 75px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        // background-color: $black;
+    }
+    button {
+        background: $red;
+        height: 75%;
+        width: 48%;
+        border-radius: 5px;
+        border-width: 1px;
+        border-top-color: $white;
+        border-left-color: $white;
+        border-right-color: $white;
+        border-bottom-color: $white;
+        transition: 0.4s;
+        a {
+            color: $white;
+            text-decoration: none;
+            h2 {
+                // text-shadow: 1px 1px 1px $black;
+                font-size: 1rem;
+            }
+        }
+        @include desktop() {
+            background: none;
+            width: 30%;
+            border-width: 2px;
+            border-top-color: $white;
+            border-left-color: $white;
+            border-right-color: $white;
+            border-bottom-color: $white;
+            box-shadow: 2px 2px $black;
+            a {
+                color: $red;
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+            }
+        }
+        &:hover {
+            background-color: $white;
+        }
+    }
+}
