@@ -1,8 +1,8 @@
 import React from "react";
 import Variables from "./variables.js"
+import Layout from "./layout.js";
 
 const style = {
-    height: "500px", //delete me after content
     background: `linear-gradient(to bottom, ${Variables.grey} 23%, ${Variables.white} 100%)`,
     display: 'flex',
     flexDirection: "column",
@@ -10,11 +10,29 @@ const style = {
     alignItems: "center",
     borderBottom: `1px solid ${Variables.red}`
 }
-
-const Section = () => {
-    return (
-        <div style={style}></div>
-    )
+const innerStyle = {
+    width: "100%",
+    maxWidth: "1000px",
+    display: 'flex'
 }
 
-export default Section
+class Section extends React.Component {
+    constructor(props){
+        super(props);
+        this.navElement = React.createRef();
+        this.state = {
+
+        }
+    }
+    render(props) {
+        return (
+            <div style={style}>
+                <div style={innerStyle}>
+                    {this.props.children}
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Section;

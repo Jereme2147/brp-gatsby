@@ -7,6 +7,7 @@ const Variables = {
   blue: "rgba(78, 128, 152, 1)",
   grey: "rgba(206, 211, 220, 1)",
   homeBanner: "trucksrear.jpg",
+  landingBanner: "tanks2000.jpg",
 
 }
 export default Variables;
