@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import bannerStyle from "../styles/banner.module.scss"
 
+// if this ceases to work see fullScreenImage.js
 const Banner = ({banner}) => {
 const data = useStaticQuery(graphql`
   query ($banner: String){
