@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+  // pathPrefix: "brp/",  // uncomment for build!!!!!!!!!!!!!!!!!!!!!!!!
   siteMetadata: {
     title: "Blue Ridge Propane",
     author: "Jereme Daniels",

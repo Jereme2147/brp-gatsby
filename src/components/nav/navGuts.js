@@ -3,6 +3,7 @@ import React from "react"
 import Img from "gatsby-image"
 import NavMiddle from "./navPhoneAndLinks.js"
 import gutsStyles from "../../styles/guts.module.scss"
+import { withPrefix } from "gatsby"
 
 class NavGuts extends React.Component {
   constructor(props) {
@@ -41,18 +42,30 @@ class NavGuts extends React.Component {
     
    return (
      <div className={gutsStyles.gutsContainer}>
-       <div className={this.state.containerStyle.visible ? gutsStyles.fadeInLogo : gutsStyles.fadeOutLogo}>
+       <div
+         className={
+           this.state.containerStyle.visible
+             ? gutsStyles.fadeInLogo
+             : gutsStyles.fadeOutLogo
+         }
+       >
          <img
-           src="brp-logo.jpg"
+           src={withPrefix("/brp-logo.jpg")}
            style={this.state.containerStyle}
            onScroll={this.handleScroll}
            alt="Blue Ridge Propane Logo"
          />
        </div>
        <NavMiddle />
-       <div className={this.state.containerStyle.visible ? gutsStyles.fadeInMap : gutsStyles.fadeOutMap}>
+       <div
+         className={
+           this.state.containerStyle.visible
+             ? gutsStyles.fadeInMap
+             : gutsStyles.fadeOutMap
+         }
+       >
          <img
-           src="map.jpg"
+           src={withPrefix("/map.jpg")}
            onScroll={this.handleScroll}
            alt="Blue Ridge Propane Service area"
          />
