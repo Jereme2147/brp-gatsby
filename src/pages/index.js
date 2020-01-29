@@ -5,9 +5,9 @@ import variables from "../components/variables.js"
 import Section from "../components/section.js"
 import { faFileExcel } from "@fortawesome/free-solid-svg-icons"
 import BlogSingle from "../components/blogSingle.js"
-import Hours from "../components/hours.js"
+import Hours from "../components/index/hours.js"
 import FullScreenImage from "../components/fullScreenImage.js"
-import Map from "../components/map.js"
+import Map from "../components/index/map.js"
 
 class IndexPage extends React.Component {
     constructor(props) {

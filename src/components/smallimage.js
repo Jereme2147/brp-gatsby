@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 //pass title, ALT as text, style as object in as object. See ServiceList
 //full passed in components: "path" "alt text" {style.image} {style.container}
 const SmallImage = ({ path }) => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
   query{
     
       allImageSharp {
@@ -21,7 +21,6 @@ const SmallImage = ({ path }) => {
     return (
         <div style={path.containerStyle}>
             {data.allImageSharp.nodes.map((item) => {
-                console.log(path) 
                 if (item.fluid.originalName == path.title) {
                     return (
                         <Img 

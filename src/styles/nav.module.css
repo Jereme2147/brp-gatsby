@@ -43,7 +43,6 @@ h3, h4, h5, h6, p {
   position: fixed;
   z-index: 9;
   top: 50px;
-  transition: 0.4s;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -55,5 +54,8 @@ h3, h4, h5, h6, p {
     flex-direction: row;
     flex-wrap: wrap;
     top: 75px;
+  }
+  .navContainer:hover {
+    background: #4e8098;
   }
 }

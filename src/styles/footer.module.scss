@@ -10,7 +10,7 @@
     position: relative;
 }
 .phone {
-    width: 100%;
+    // width: 100%;
     text-align: center;
     color: $white;
     text-shadow: 2px 2px 2px $black;
@@ -24,7 +24,7 @@
 .address {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    // width: 100%;
     flex-wrap: wrap;
     text-shadow: 1px 1px 1px $black;
     border-bottom: 2px solid $grey;

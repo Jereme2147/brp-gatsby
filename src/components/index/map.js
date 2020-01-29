@@ -1,5 +1,5 @@
 import React from 'react'
-import variables from './variables.js'
+import variables from '../variables.js'
 
 class Map extends React.Component {
     constructor(props) {

@@ -18,8 +18,7 @@ module.exports = {
       options: {
         // spaceId: process.env.CONTENTFUL_SPACE_ID,
         // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-        spaceId: "kl4449kc17a7",
-        accessToken: "dd5Vgaw8ZtE4RYhTL-QyBcVYdd_JDs6ZkuzJsSzqz5Y"
+        //redacted for commit
       },
     },
     {

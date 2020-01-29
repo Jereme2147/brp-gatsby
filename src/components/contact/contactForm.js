@@ -1,6 +1,7 @@
 import React from "react"
 import Variables from "../variables.js"
-import FormStyle from "./formStyle"
+import Form from "./form.js"
+
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
@@ -77,127 +78,7 @@ class ContactForm extends React.Component {
                 <h3 style={style.h3}>Blueridgepropanenc@gmail.com</h3>
               </a>
             </div>
-            <form
-              style={FormStyle.form}
-              action="/brp/mail.php"
-              id="contact-form"
-              method="POST"
-            >
-              <input
-                style={FormStyle.input}
-                type="text"
-                class="inputs"
-                id="first"
-                name="first"
-                placeholder="first name"
-                alt="first name field"
-              />
-              <input
-                style={FormStyle.input}
-                type="text"
-                class="inputs"
-                id="last"
-                name="last"
-                placeholder="last name*"
-                required
-                alt="last name field"
-              />
-              <input
-                style={FormStyle.input}
-                type="email"
-                class="inputs"
-                id="email"
-                name="email"
-                placeholder="customer@gmail.com*"
-                required
-                alt="email field"
-              />
-              <input
-                style={FormStyle.input}
-                type="text"
-                class="inputs"
-                id="business"
-                name="business"
-                placeholder="your business name"
-                alt="business input"
-              />
-              <input
-                style={FormStyle.input}
-                type="tel"
-                id="phone"
-                class="inputs"
-                name="phone"
-                placeholder="Phone: 828-000-0000"
-              />
-              <div id="user-info">
-                <h4 class="contact-titles">I'm interested in:</h4>
-                <select name="choose" id="dropdown">
-                  <fieldset>
-                    <option name="need" value="none">
-                      -Choose one-
-                    </option>
-                    <option name="need" value="request delivery">
-                      Request a delivery
-                    </option>
-                    <option name="need" value="change suppliers">
-                      Change Propane Suppliers
-                    </option>
-                    <option name="need" value="learn about pricing">
-                      Learn about Propane pricing options
-                    </option>
-                    <option name="need" value="switch to lp">
-                      Switch to Propane
-                    </option>
-                  </fieldset>
-                </select>
-              </div>
-              <div>
-                <ul>
-                  <li>
-                    {" "}
-                    <input name="heating" value="heating" type="checkbox"/>
-                      Heating
-                  </li>
-                  <li>
-                    {" "}
-                    <input name="cooking" value="cooking" type="checkbox"/>
-                      Cooking
-                  </li>
-                  <li>
-                    {" "}
-                    <input name="water" value="water heater" type="checkbox"/>
-                      Water Heater
-                  </li>
-                  <li>
-                    {" "}
-                    <input name="fireplace" value="fireplace" type="checkbox"/>
-                      Fireplace
-                  </li>
-                  <li>
-                    {" "}
-                    <input name="clothes" value="clothes dryer" type="checkbox"/>
-                      Clothes Dryer
-                  </li>
-                  <li>
-                    {" "}
-                    <input name="generator" value="generator" type="checkbox"/>
-                      Generator
-                  </li>
-                </ul>
-              </div>
-              <div id="comment">
-                <textarea
-                  id="comments"
-                  name="comments"
-                  placeholder="Any additional questions or comments"
-                ></textarea>
-              </div>
-              <div id="submit">
-                <button type="submit" name="sumbit" alt="send button">
-                  Send
-                </button>
-              </div>
-            </form>
+            <Form />
           </div>
         )
     }

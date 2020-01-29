@@ -19,3 +19,11 @@
 //     })
 //   }
 // }
+
+//***** JUST HOLD FOR NOW */
+// const path = require('path')
+
+// module.exports.creatPages = async ({ graphql, actions }) => {
+//     const { createPage } = actions
+//     const blogTemplate = path.resolve('')
+// }

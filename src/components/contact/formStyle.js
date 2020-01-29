@@ -16,6 +16,14 @@ const FormStyle = {
     borderRadius: "5px",
     background: `${Variables.white}`,
   },
+  textarea: {
+    width: "100%",
+    maxWidth: "800px",
+    fontSize: "1.2rem",
+    borderRadius: "5px",
+    background: `${Variables.white}`
+  },
+
 }
 
 export default FormStyle;

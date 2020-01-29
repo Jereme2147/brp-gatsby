@@ -4,7 +4,6 @@
     position: fixed;
     z-index: 9;
     top: 50px;
-    transition: 0.4s;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -14,5 +13,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         top: 75px;
+        &:hover {
+            background: $blue;
+        }
     }
 }

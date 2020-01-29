@@ -47,7 +47,6 @@ h3, h4, h5, h6, p {
 }
 
 .phone {
-  width: 100%;
   text-align: center;
   color: #fcf7f8;
   text-shadow: 2px 2px 2px #363636;
@@ -65,7 +64,6 @@ h3, h4, h5, h6, p {
 .address {
   display: flex;
   flex-direction: column;
-  width: 100%;
   flex-wrap: wrap;
   text-shadow: 1px 1px 1px #363636;
   border-bottom: 2px solid #ced3dc;
