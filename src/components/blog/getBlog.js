@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
-import variables from "../variables.js"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const GetBlog = () => {

@@ -19,7 +19,7 @@ class BlogById extends React.Component {
     }
     click = () => {
         console.log("clicked")
-        if(this.state.height == '100px'){
+        if(this.state.height === '100px'){
             this.setState({
               height: "auto"
             })

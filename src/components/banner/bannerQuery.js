@@ -24,13 +24,18 @@ const BannerQuery = ({ banner }) => {
         // spacer div.  gatsby and flex don't positon just right setting "top"
         <div>
             {data.allImageSharp.nodes.map((item) => {
-                if (item.fluid.originalName == banner) {
+                if (item.fluid.originalName === banner) {
                     return (
                         <div className={bannerStyle.bannerImage} key={banner} >
                             <Img
                                 fluid={item.fluid}
                             />
                         </div>
+                    )
+                }
+                else {
+                    return (
+                        <div></div>
                     )
                 }
             })}

@@ -75,7 +75,6 @@ class Form extends React.Component {
                 <input
                     style={FormStyle.input}
                     type="text"
-                    class="inputs"
                     id="first"
                     name="first"
                     placeholder="first name"
@@ -84,7 +83,6 @@ class Form extends React.Component {
                 <input
                     style={FormStyle.input}
                     type="text"
-                    class="inputs"
                     id="last"
                     name="last"
                     placeholder="last name*"
@@ -94,7 +92,6 @@ class Form extends React.Component {
                 <input
                     style={FormStyle.input}
                     type="email"
-                    class="inputs"
                     id="email"
                     name="email"
                     placeholder="customer@gmail.com*"
@@ -104,7 +101,6 @@ class Form extends React.Component {
                 <input
                     style={FormStyle.input}
                     type="text"
-                    class="inputs"
                     id="business"
                     name="business"
                     placeholder="your business name"
@@ -114,7 +110,6 @@ class Form extends React.Component {
                     style={FormStyle.input}
                     type="tel"
                     id="phone"
-                    class="inputs"
                     name="phone"
                     placeholder="Phone: 828-000-0000"
                 />
@@ -129,7 +124,7 @@ class Form extends React.Component {
                 </div>
                 <div id="submit">
                     <button 
-                        style={FormStyle.button}
+                        // style={FormStyle.button} //not sure about this honestly
                         style={this.state.style.submit} 
                         type="submit" 
                         name="sumbit" 

@@ -13,7 +13,9 @@ const style = {
 const innerStyle = {
     width: "100%",
     maxWidth: "1000px",
-    display: 'flex'
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
 }
 
 class Section extends React.Component {

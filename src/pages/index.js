@@ -3,7 +3,7 @@ import Layout from "../components/layout.js"
 import Banner from "../components/banner/banner.js"
 import variables from "../components/variables.js"
 import Section from "../components/section.js"
-import { faFileExcel } from "@fortawesome/free-solid-svg-icons"
+// import { faFileExcel } from "@fortawesome/free-solid-svg-icons"
 import BlogSingle from "../components/blogSingle.js"
 import Hours from "../components/index/hours.js"
 import FullScreenImage from "../components/fullScreenImage.js"
@@ -18,7 +18,6 @@ class IndexPage extends React.Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount")
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
     }
@@ -26,12 +25,9 @@ class IndexPage extends React.Component {
         window.removeEventListener('resize', this.handleWindowSizeChange)
     }
     handleWindowSizeChange = () => {
-        console.log(window.innerWidth, "************* no enter")
         if (window.innerWidth < 950) {
-            console.log(window.innerWidth, "handle size < 950", this.state.width)
             this.setState({ width: true })
         } else {
-            console.log(window.innerWidth, "failed query")
             this.setState({ width: false })
         }
 
@@ -69,7 +65,7 @@ class IndexPage extends React.Component {
                                 alt="Blue Ridge Propane Service area"
                             />
                         </div>
-                        <h3 style={{ fontSize: `${this.state.width == true ? '1.5rem' : '2rem'}`, padding: '5px 20px', marginTop: '25px' }}>
+                        <h3 style={{ fontSize: `${this.state.width === true ? '1.5rem' : '2rem'}`, padding: '5px 20px', marginTop: '25px' }}>
                             Your only locally owned and operated bull servicer propane company
                             based in Avery County NC and serving Carter County TN by people you know
                             from your community.
@@ -84,14 +80,14 @@ class IndexPage extends React.Component {
                         }}>
                             <img
                                 style={{
-                                    width: `${this.state.width == true ? '30%' : '40%'}`
+                                    width: `${this.state.width === true ? '30%' : '40%'}`
                                 }}
                                 src="bbb.jpg"
                                 alt="better business bureau"
                             />
                             <h2
                                 style={{
-                                    fontSize: `${this.state.width == true ? '1rem' : '1.5rem'}`,
+                                    fontSize: `${this.state.width === true ? '1rem' : '1.5rem'}`,
                                     padding: '10px 0'
                                 }}
                             >
