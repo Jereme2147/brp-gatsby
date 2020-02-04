@@ -30,7 +30,7 @@ const MobileMenu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={"/saftey"} activeStyle={activeStyle}>
+                    <Link to={"/safety"} activeStyle={activeStyle}>
                         <h2>Safety</h2>
                     </Link>
                 </li>

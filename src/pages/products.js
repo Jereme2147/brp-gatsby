@@ -4,20 +4,32 @@ import Banner from "../components/banner/banner.js"
 import { graphql, useStaticQuery } from "gatsby"
 import Section from "../components/section"
 import Layout from "../components/layout"
-import Category from "../components/products/category.js"
+import Img from "gatsby-image"
 
 export const data = graphql`
          query {
-           allContentfulVendor(sort: { fields: category }) {
-             edges {
-               node {
-                 category
-                 id
-                 url
-                 name
-               }
-             }
-           }
+           allContentfulProductCategory(sort: {fields: category, order: DESC}) {
+                                        edges {
+                                             node {
+                                                    id
+                                                    category
+                                                    product {
+                                                        id
+                                                        name
+                                                        vendors {
+                                                                name
+                                                                url
+                                                            }
+                                                    }
+                                                 categoryImage {
+                                                            fluid(maxWidth: 400) {
+                                                            ...GatsbyContentfulFluid_withWebp
+                                                            }
+                                                        }
+                                                   
+      }
+    }
+  }
          }
        `
 class Products extends React.Component {
@@ -25,7 +37,6 @@ class Products extends React.Component {
         super(props);
         this.state = {
             width: true,
-            categories: this.findCategories(),
         }
     }
 
@@ -34,10 +45,7 @@ class Products extends React.Component {
         window.addEventListener('resize', this.handleWindowSizeChange)
         // this.findCategories();
     }
-    componentWillMount() {
-      this.findCategories();
-    }
-    UNSAFE_componentWillUnmount() {
+    componentWillUnmount() {
         window.removeEventListener('resize', this.handleWindowSizeChange)
     }
     handleWindowSizeChange = () => {
@@ -49,80 +57,77 @@ class Products extends React.Component {
 
     }
     //find unique categories and sets state to only unique ones. 
-    findCategories = () => {
-        const stuff = []
-        let catObjs = []
-        this.props.data.allContentfulVendor.edges.map(item => {
-            let go = 0
-            stuff.map(thing => {
-                if(thing[0] === item.node.category[0]){
-                    go = 1
-                }else {
-                    go = 0
-                }
-            })
-            if(go == 0){
-                stuff.push(item.node.category)
-            }
-          })
-          let stuff2 = []
-          stuff.map(another => {
-            stuff2.push(another[0])
-          })
-          //puts all products into an array of objects by categorie
-          stuff2.map(thing => { 
-            let nodeTemp = []//mapping through unique categories
-            this.props.data.allContentfulVendor.edges.map(item2 => {
-              //mapping through all products
-              if(thing === item2.node.category[0]){
-                nodeTemp.push(item2.node)
-              }
-            })
-            catObjs.push(nodeTemp)
-          })
-          console.log(catObjs)
-          return catObjs;
-    }
 
     render() {
         const style = {
-          container: {
-            width: "40%",
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "10px 5px",
-            fontSize: `${this.state.width === true ? ".8rem" : ".8rem"}`
-          },
-          category: {
-            width: "100%",
-          },
-          innerStyle: {
-            width: "100%",
-          }
+            container: {
+                width: `${this.state.width ? '95%' : '45%'}`,
+                // width: "45%",
+                marginTop: "20px",
+                padding: "0 5px",
+                borderBottom: `3px solid ${variables.blue}`,
+                paddingBottom: '10px',
+                marginBottom: '20px',
+                // textAlign: 'center'
+            },
+            image: {
+                width: "100%",
+                borderRadius: "10px",
+                boxShadow: `3px 3px 3px ${variables.black}, -2px -2px 2px ${variables.white}`,
+            },
+            imageContainer: {
+                display: "flex",
+                flexDirection: "column"
+            },
+            innerStyle: {
+                margin: "10px 0",
+                color: `${variables.black}`,
+                margin: `20px 0 5px 15px`,
+                fontSize: `1.5rem`,
+                // width: "100%",
+            },
+            h1: {
+                marginTop: "10px",
+                textAlign: "center",
+                color: `${variables.blue}`,
+                fontSize: "1.5rem", 
+                textShadow: `1px 1px 1px ${variables.black}`
+            }
         }
         return (
-          <Layout>
-            <Banner banner={variables.homeBanner} />
-            <Section>
-              {this.state.categories.map((cat) => {
-                return(//I am the container for each Category
-                  <div style={style.container}>  
-                    <div style={style.innerStyle
-                    //I am the inner wrapper 
-                    }>
-                      <h2 style={style.category}>{cat[0].category
-                      //I show the category title
-                      }</h2>
-                      <Category category={cat} />
-                    </div>
-                  </div>
-                )
-              })}
-            </Section>
-          </Layout>
+            <Layout>
+                <Banner banner={variables.homeBanner} />
+                <Section>
+                <h1 style={{width: "100%", textAlign: "center", fontSize: "2.5rem", marginTop: "10px",
+                            textShadow: `2px 2px 1px ${variables.black}`, color: `${variables.blue}`}}>Products</h1>
+                    {this.props.data.allContentfulProductCategory.edges.map((item) => {
+                        return (
+                            <div style={style.container}>
+                                <div style={style.imageContainer}>
+                                <Img
+                                    fluid={item.node.categoryImage.fluid
+                                    }
+                                   style={style.image}
+                                />
+                                </div>
+                                <h1 key={`${item.node.id}${item.node.category}`}style={style.h1}>{item.node.category}</h1>
+                                <ul>
+                                    {item.node.product.vendors.map((thing) => {
+                                        return (
+                                            <li key={thing.id} style={style.innerStyle}>
+                                                <a key={`${thing.id}${thing.url}`} 
+                                                    href={thing.url} rel="noopener noreferrer">
+                                                    <h2 key={`${thing.id}${thing.name}`}>{thing.name}</h2>
+                                                </a>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                                
+                            </div>)
+                    })}
+                </Section>
+            </Layout>
         )
     }
 }

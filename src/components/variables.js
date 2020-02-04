@@ -12,8 +12,14 @@ const Variables = {
   landingBanner: "tanks2000.jpg",
   contactBanner: "office-picture.jpg",
   servicesBanner: "bottomBanner.jpg",
+  safetyBanner: "safetyBanner.jpg",
   // small servcies images
   truck500: "truck500.jpg",
+  //safety pics
+  smellGas: "smellGas.jpg",
+  tankOff: "brptank.jpg",
+  gauge: "gauge.jpg",
+  weather: "weather.jpg",
   
 
 }

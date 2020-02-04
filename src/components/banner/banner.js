@@ -14,7 +14,6 @@ class Banner extends React.Component {
     componentDidMount() {
         this.handleWindowSizeChange() 
         window.addEventListener('resize', this.handleWindowSizeChange)
-        console.log(this.state.banner)
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleWindowSizeChange)
@@ -35,7 +34,6 @@ class Banner extends React.Component {
         return (
                 <div>
                 <div style={style}>
-                    <h1>spacer</h1>
                 </div>
                     <BannerQuery banner={this.state.banner} />
                 </div>
