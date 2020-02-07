@@ -59,7 +59,8 @@ h3, h4, h5, h6, p, li {
   color: #fcf7f8;
   text-shadow: 2px 1px 1px #a31621;
   font-size: 1.5rem;
-  align-self: flex-start;
+  align-self: flex-end;
+  padding: 5px 5px 0 0;
 }
 
 @media (min-width: 950px) {

@@ -124,7 +124,6 @@ h3, h4, h5, h6, p, li {
   align-items: center;
   justify-content: center;
   width: 50%;
-  max-height: 100%;
 }
 
 @media (min-width: 950px) {
