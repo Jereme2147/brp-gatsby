@@ -9,8 +9,8 @@ const SmallImage = ({ path }) => {
     
       allImageSharp {
         nodes{
-          fluid(maxWidth: 600, quality: 100) {
-          ...GatsbyImageSharpFluid
+          fluid(maxWidth: 600, quality: 50) {
+          ...GatsbyImageSharpFluid_withWebp
           originalName
         }
         }
