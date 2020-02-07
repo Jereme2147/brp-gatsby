@@ -61,13 +61,13 @@ h3, h4, h5, h6, p, li {
     opacity: 0;
     transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 25%;
   }
   .fadeOutMap img {
     height: 75%;
     border-radius: 50%;
+    align-self: center;
+    justify-self: center;
   }
 }
 
@@ -80,21 +80,20 @@ h3, h4, h5, h6, p, li {
     opacity: 1;
     transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 25%;
   }
   .fadeInMap img {
     height: 75%;
     border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+    margin-left: auto;
   }
 }
 
 .fadeOutLogo {
   opacity: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 50%;
 }
 
@@ -109,6 +108,9 @@ h3, h4, h5, h6, p, li {
 .fadeOutLogo img {
   height: 50%;
   border-radius: 5px;
+  align-self: center;
+  justify-self: center;
+  margin-left: auto;
 }
 
 @media (min-width: 950px) {
@@ -121,9 +123,8 @@ h3, h4, h5, h6, p, li {
   opacity: 1;
   transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 50%;
+  text-align: center;
 }
 
 @media (min-width: 950px) {
@@ -135,6 +136,9 @@ h3, h4, h5, h6, p, li {
 .fadeInLogo img {
   height: 50%;
   border-radius: 5px;
+  align-self: center;
+  justify-self: center;
+  margin-left: auto;
 }
 
 @media (min-width: 950px) {

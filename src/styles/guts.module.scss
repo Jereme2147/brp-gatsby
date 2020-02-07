@@ -17,12 +17,14 @@
         opacity:0;
         transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
         width: 25%;
         img {
             height: 75%;
             border-radius: 50%;
+            align-self: center;
+            justify-self: center;
             
         }
     }
@@ -33,12 +35,15 @@
         opacity:1;
         transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
         width: 25%;
         img {
             height: 75%;
             border-radius: 50%;
+            align-self: center;
+            justify-self: center;
+            margin-left: auto;
             
         }
     }
@@ -48,10 +53,11 @@
     //  transition: display 0.5s;
     opacity: 0;
      display: flex;
-     align-items: center;
-     justify-content: center;
+    //  align-items: center;
+    //  justify-content: center;
      width: 50%;
     //  max-height: 100%;
+    // text-align: center;
      @include desktop() {
         opacity:0;
     //  display: none;
@@ -62,6 +68,9 @@
      img {
          height: 50%;
          border-radius: 5px;
+         align-self: center;
+         justify-self: center;
+         margin-left: auto;
          @include desktop(){
             //  width: 25%;
              height: 60%;
@@ -73,9 +82,10 @@
      opacity:1;
      transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
      display: flex;
-     align-items: center;
-     justify-content: center;
+    //  align-items: center;
+    //  justify-content: center;
      width: 50%;
+    text-align: center;
     //  max-height: 100%;
      @include desktop() {
          width: 25%;
@@ -83,6 +93,9 @@
      img {
          height: 50%;
          border-radius: 5px;
+         align-self: center;
+         justify-self: center;
+         margin-left: auto;
          @include desktop(){
              height: 60%;
             // width: 90%;
