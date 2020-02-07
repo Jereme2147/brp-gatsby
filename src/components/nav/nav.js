@@ -10,8 +10,6 @@ class Nav extends React.Component {
     this.state = {
       containerStyle: {
         height: "20vh",
-        // width: "100vw"
-        // backgroundColor: `${ Colors.blue }`
       },
       logoStyle: {
           
@@ -30,14 +28,12 @@ class Nav extends React.Component {
       this.setState({
         containerStyle: {
           height: `10vh`,
-          // width: "100%",
         }
       })
     } else {
       this.setState({
         containerStyle: {
           height: `20vh`,
-          // width: "100%"
         }
       })
     }

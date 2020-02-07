@@ -46,6 +46,7 @@
 .fadeOutLogo{
      
     //  transition: display 0.5s;
+    opacity: 0;
      display: flex;
      align-items: center;
      justify-content: center;
@@ -62,8 +63,8 @@
          height: 50%;
          border-radius: 5px;
          @include desktop(){
-             width: 25%;
-            //  height: 60%;
+            //  width: 25%;
+             height: 60%;
          }
      }
 
@@ -83,8 +84,8 @@
          height: 50%;
          border-radius: 5px;
          @include desktop(){
-            //  height: 60%;
-            width: 25%;
+             height: 60%;
+            // width: 90%;
          }
      }
 

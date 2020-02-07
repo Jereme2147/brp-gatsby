@@ -9,7 +9,7 @@ const BannerQuery = ({ banner }) => {
       query {
         allImageSharp {
           nodes {
-            fluid(maxWidth: 1900, quality: 40) {
+            fluid(maxWidth: 1900, quality: 50) {
               ...GatsbyImageSharpFluid_withWebp
               srcSetWebp
               originalName
