@@ -95,7 +95,6 @@ h3, h4, h5, h6, p, li {
   align-items: center;
   justify-content: center;
   width: 50%;
-  max-height: 100%;
 }
 
 @media (min-width: 950px) {
@@ -113,7 +112,7 @@ h3, h4, h5, h6, p, li {
 
 @media (min-width: 950px) {
   .fadeOutLogo img {
-    height: 60%;
+    width: 25%;
   }
 }
 
@@ -139,6 +138,6 @@ h3, h4, h5, h6, p, li {
 
 @media (min-width: 950px) {
   .fadeInLogo img {
-    height: 60%;
+    width: 25%;
   }
 }

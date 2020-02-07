@@ -20,7 +20,7 @@ class Banner extends React.Component {
     }
     handleWindowSizeChange = () => {
         if (window.innerWidth < 950) {
-            this.setState({ top: 30 + .2 * window.innerHeight })
+            this.setState({ top: 50 + .2 * window.innerHeight })
         } else {
             this.setState({ top: 75 + .2 * window.innerHeight })
         }

@@ -6,18 +6,18 @@ import bannerStyle from "../../styles/banner.module.scss"
 
 const BannerQuery = ({ banner }) => {
     const data = useStaticQuery(graphql`
-  query {
-      allImageSharp {
-        nodes{
-          fluid(maxWidth: 1900, quality: 100) {
-          ...GatsbyImageSharpFluid
-          originalName
+      query {
+        allImageSharp {
+          nodes {
+            fluid(maxWidth: 1900, quality: 40) {
+              ...GatsbyImageSharpFluid_withWebp
+              srcSetWebp
+              originalName
+            }
+          }
         }
       }
-        
-    }
-  }
-`)
+    `)
     //IMPORTANT ** these numbers must change if the NAV changes!!!
     //for some reason only works with external scss module wtf?
     return (
