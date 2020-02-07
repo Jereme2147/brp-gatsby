@@ -23,11 +23,27 @@ body {
   line-height: 1;
 }
 
+button:focus {
+  outline: 0;
+}
+
+h1 {
+  font-family: 'Muli', sans-serif;
+}
+
+h2 {
+  font-family: 'Jaldi', sans-serif;
+}
+
+h3, h4, h5, h6, p, li {
+  font-family: 'Molengo', sans-serif;
+}
+
 .gutsContainer {
   width: 100vw;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 @media (min-width: 950px) {
@@ -47,10 +63,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 25%;
   }
   .fadeOutMap img {
-    height: 85%;
+    height: 75%;
     border-radius: 50%;
   }
 }
@@ -66,10 +82,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 25%;
   }
   .fadeInMap img {
-    height: 85%;
+    height: 75%;
     border-radius: 50%;
   }
 }
@@ -86,7 +102,7 @@ body {
   .fadeOutLogo {
     opacity: 0;
     transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
-    width: 30%;
+    width: 25%;
   }
 }
 
@@ -97,7 +113,7 @@ body {
 
 @media (min-width: 950px) {
   .fadeOutLogo img {
-    height: 85%;
+    height: 60%;
   }
 }
 
@@ -113,7 +129,7 @@ body {
 
 @media (min-width: 950px) {
   .fadeInLogo {
-    width: 30%;
+    width: 25%;
   }
 }
 
@@ -124,6 +140,6 @@ body {
 
 @media (min-width: 950px) {
   .fadeInLogo img {
-    height: 85%;
+    height: 60%;
   }
 }

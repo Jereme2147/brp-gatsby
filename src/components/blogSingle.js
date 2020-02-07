@@ -1,5 +1,4 @@
 import React from 'react'
-import { faFileExcel } from '@fortawesome/free-solid-svg-icons';
 import variables from "../components/variables.js"
 import GetBlog from "../components/blog/getBlog.js"
 import GetBlogTitle from "../components/blog/getBlogTitle.js"
@@ -17,7 +16,6 @@ class BlogSingle extends React.Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount")
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
     }
@@ -25,12 +23,9 @@ class BlogSingle extends React.Component {
         window.removeEventListener('resize', this.handleWindowSizeChange)
     }
     handleWindowSizeChange = () => {
-        console.log(window.innerWidth, "************* no enter")
         if (window.innerWidth < 950) {
-            console.log(window.innerWidth, "handle size < 950", this.state.width)
             this.setState({ width: true })
         } else {
-            console.log(window.innerWidth, "failed query")
             this.setState({ width: false })
         }
 
@@ -40,10 +35,10 @@ class BlogSingle extends React.Component {
         const styleContainer = {
             display: 'flex',
             flexDirection: 'column',
-            padding: `${this.state.width == true ? '20px 5px' : '30px 10px'}`
+            padding: `${this.state.width ? '20px 5px' : '30px 10px'}`
         }
         const styleTitle = {
-            fontSize: `${this.state.width == true ? '1.5rem' : '2rem'}`,
+            fontSize: `${this.state.width ? '1.5rem' : '2rem'}`,
             borderBottom: `2px solid ${variables.blue}`,
             paddingBottom: '15px',
         }

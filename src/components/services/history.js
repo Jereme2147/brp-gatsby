@@ -10,7 +10,6 @@ class History extends React.Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount")
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
     }
@@ -18,12 +17,9 @@ class History extends React.Component {
         window.removeEventListener('resize', this.handleWindowSizeChange)
     }
     handleWindowSizeChange = () => {
-        console.log(window.innerWidth, "************* no enter")
         if (window.innerWidth < 950) {
-            console.log(window.innerWidth, "handle size < 950", this.state.width)
             this.setState({ width: true })
         } else {
-            console.log(window.innerWidth, "failed query")
             this.setState({ width: false })
         }
 
@@ -37,7 +33,7 @@ class History extends React.Component {
                 width: "100%"
             },
             h1: {
-                fontSize: `${this.state.width == true ? '1.5rem' : '2.5rem'}`,
+                fontSize: `${this.state.width ? '1.5rem' : '2.5rem'}`,
                 width: "100%",
                 margin: "25px 0",
                 padding: "0 0 10px 0",
@@ -46,10 +42,9 @@ class History extends React.Component {
                 textShadow: `1px 1px 1px ${Variables.white}`
             },
             h2: {
-                fontSize: `${this.state.width == true ? '1.5rem' : '2rem'}`,
-                padding: `${this.state.width == true ? '10px' : '5px'}`,
+                fontSize: `${this.state.width ? '1.5rem' : '2rem'}`,
+                padding: `${this.state.width ? '10px' : '5px'}`,
                 fontWeight: "400",
-                // width: "100%",
                 marginBottom: "30px",
                 textShadow: `2px 2px 1px ${Variables.white}`
             }

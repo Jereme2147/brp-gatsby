@@ -36,12 +36,12 @@ class IndexPage extends React.Component {
     render() {
         const h1Style = {
             textAlign: "center",
-            fontSize: `${this.state.width == true ? "2rem" : "2.5rem"}`,
+            fontSize: `${this.state.width ? "2rem" : "2.5rem"}`,
             borderBottom: `1px solid ${variables.red}`,
             padding: "10px 0"
         }
         const imgDivStyle = {
-            display: `${this.state.width == true ? 'flex' : 'none'}`,
+            display: `${this.state.width ? 'flex' : 'none'}`,
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
@@ -65,7 +65,7 @@ class IndexPage extends React.Component {
                                 alt="Blue Ridge Propane Service area"
                             />
                         </div>
-                        <h3 style={{ fontSize: `${this.state.width === true ? '1.5rem' : '2rem'}`, padding: '5px 20px', marginTop: '25px' }}>
+                        <h3 style={{ fontSize: `${this.state.width ? '1.5rem' : '2rem'}`, padding: '5px 20px', marginTop: '25px' }}>
                             Your only locally owned and operated bull servicer propane company
                             based in Avery County NC and serving Carter County TN by people you know
                             from your community.
@@ -80,14 +80,14 @@ class IndexPage extends React.Component {
                         }}>
                             <img
                                 style={{
-                                    width: `${this.state.width === true ? '30%' : '40%'}`
+                                    width: `${this.state.width ? '30%' : '40%'}`
                                 }}
                                 src="bbb.jpg"
                                 alt="better business bureau"
                             />
                             <h2
                                 style={{
-                                    fontSize: `${this.state.width === true ? '1rem' : '1.5rem'}`,
+                                    fontSize: `${this.state.width ? '1rem' : '1.5rem'}`,
                                     padding: '10px 0'
                                 }}
                             >

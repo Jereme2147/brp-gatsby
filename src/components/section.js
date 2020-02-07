@@ -1,6 +1,5 @@
 import React from "react";
 import Variables from "./variables.js"
-import Layout from "./layout.js";
 
 const style = {
     background: `linear-gradient(to bottom, ${Variables.grey} 23%, ${Variables.white} 100%)`,

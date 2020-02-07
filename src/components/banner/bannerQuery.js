@@ -29,14 +29,13 @@ const BannerQuery = ({ banner }) => {
                         <div className={bannerStyle.bannerImage} key={banner} >
                             <Img
                                 fluid={item.fluid}
+                                key={item.fluid.originalName}
                             />
                         </div>
                     )
                 }
                 else {
-                    return (
-                        <div></div>
-                    )
+                    return <div key={item.fluid.originalName}></div>
                 }
             })}
 

@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import variables from "../variables.js"
 
 const GetBlogTitle = () => {
   const data = useStaticQuery(graphql`
@@ -15,7 +14,6 @@ const GetBlogTitle = () => {
   `)
 
   return (
-    // <div>{console.log(data.allContentfulBlog.nodes[0].title)}</div>
       <h2>{data.allContentfulBlog.nodes[0].title}</h2>
   )
 }

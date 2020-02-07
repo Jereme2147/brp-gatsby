@@ -27,31 +27,34 @@ const BlogQuery = ({ id }) => {
   return (
     <div>
     {data.allContentfulBlog.nodes.map((item) => {
-        if(id == item.id && item.blogImage){
+        if(id === item.id && item.blogImage){
             return (
-              <div>
+              <div key={item.id}>
                 <h2>
                   {item.title}
-                  <span style={{fontWeight: '400'}}> - Click to read more..</span>
+                  <span style={{ fontWeight: "400" }}>
+                    {" "}
+                    - Click to read more..
+                  </span>
                 </h2>
                 <h3>{item.date}</h3>
-                <div
-                    style={{marginTop: "10px"}}
-                >{documentToReactComponents(item.content.json)}</div>
+                <div style={{ marginTop: "10px" }}>
+                  {documentToReactComponents(item.content.json)}
+                </div>
                 <Img
-                  key={item.title}
+                  key={item.id}
                   fluid={item.blogImage[0].fluid}
                   alt={item.alt}
                   style={{
-                    margin: '20px 0',
-                    boxShadow: `3px 3px 3px ${variables.black}`
-                    }}
+                    margin: "20px 0",
+                    boxShadow: `3px 3px 3px ${variables.black}`,
+                  }}
                 />
               </div>
             ) 
-        }else if(id == item.id) { // so it doesn't break if there's no image. 
+        }else if(id === item.id) { // so it doesn't break if there's no image. 
             return (
-              <div>
+              <div key={item.id}>
                 <h2>
                   {item.title}
                   <span style={{ fontWeight: "400" }}>

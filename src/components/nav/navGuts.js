@@ -1,6 +1,5 @@
 // nav section. controls logo/map imports middle (# and links)
 import React from "react"
-import Img from "gatsby-image"
 import NavMiddle from "./navPhoneAndLinks.js"
 import gutsStyles from "../../styles/guts.module.scss"
 import { withPrefix } from "gatsby"

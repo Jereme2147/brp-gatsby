@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Section from '../components/section'
 import Layout from '../components/layout'
 import Banner from "../components/banner/banner.js"
@@ -29,7 +29,6 @@ class Blog extends React.Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount")
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
     }
@@ -37,12 +36,9 @@ class Blog extends React.Component {
         window.removeEventListener('resize', this.handleWindowSizeChange)
     }
     handleWindowSizeChange = () => {
-        console.log(window.innerWidth, "************* no enter")
         if (window.innerWidth < 950) {
-            console.log(window.innerWidth, "handle size < 950", this.state.width)
             this.setState({ width: true })
         } else {
-            console.log(window.innerWidth, "failed query")
             this.setState({ width: false })
         }
 
@@ -52,25 +48,25 @@ class Blog extends React.Component {
     }
     render() {
 
-        const style = {
-            container: {
-            display: "flex",
-            flexDirection: `column`,
-            width: "100%",
-            justifyContent: "space-around",
-            alignItems: "center",
-            padding: "20px 0",
-            fontSize: `${this.state.width === true ? "1.3rem" : "2rem"}`,
-          },
-        }
+        // const style = {
+        //     container: {
+        //     display: "flex",
+        //     flexDirection: `column`,
+        //     width: "100%",
+        //     justifyContent: "space-around",
+        //     alignItems: "center",
+        //     padding: "20px 0",
+        //     fontSize: `${this.state.width === true ? "1.3rem" : "2rem"}`,
+        //   },
+        // }
         return (
           <Layout>
             <Banner banner={variables.homeBanner} />
               <div >
                   {this.props.data.allContentfulBlog.nodes.map((item) => {
                     return (
-                      <Section>
-                        <BlogById id={item.id} />
+                      <Section key={item.id}>
+                        <BlogById id={item.id} key={item.id}/>
                       </Section>
                     )
                   })}

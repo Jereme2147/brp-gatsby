@@ -35,7 +35,7 @@ h2 {
   font-family: 'Jaldi', sans-serif;
 }
 
-h3, h4, h5, h6, p {
+h3, h4, h5, h6, p, li {
   font-family: 'Molengo', sans-serif;
 }
 
@@ -44,12 +44,13 @@ h3, h4, h5, h6, p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
 @media (min-width: 950px) {
   .container {
+    align-items: center;
     width: 40%;
   }
 }
@@ -58,10 +59,12 @@ h3, h4, h5, h6, p {
   color: #fcf7f8;
   text-shadow: 2px 1px 1px #a31621;
   font-size: 1.5rem;
+  align-self: flex-start;
 }
 
 @media (min-width: 950px) {
   .container h1 {
+    align-self: center;
     font-size: 2.5rem;
     font-weight: 500;
     height: 50%;
@@ -86,7 +89,7 @@ h3, h4, h5, h6, p {
     text-shadow: 2px 1px 1px #363636;
   }
   .links a h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 500;
   }
 }

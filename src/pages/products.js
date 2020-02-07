@@ -1,7 +1,7 @@
 import React from 'react'
 import variables from "../components/variables.js"
 import Banner from "../components/banner/banner.js"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Section from "../components/section"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
@@ -43,7 +43,6 @@ class Products extends React.Component {
     componentDidMount() {
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
-        // this.findCategories();
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleWindowSizeChange)
@@ -62,13 +61,11 @@ class Products extends React.Component {
         const style = {
             container: {
                 width: `${this.state.width ? '95%' : '45%'}`,
-                // width: "45%",
                 marginTop: "20px",
                 padding: "0 5px",
                 borderBottom: `3px solid ${variables.blue}`,
                 paddingBottom: '10px',
                 marginBottom: '20px',
-                // textAlign: 'center'
             },
             image: {
                 width: "100%",
@@ -80,11 +77,9 @@ class Products extends React.Component {
                 flexDirection: "column"
             },
             innerStyle: {
-                margin: "10px 0",
                 color: `${variables.black}`,
                 margin: `20px 0 5px 15px`,
                 fontSize: `1.5rem`,
-                // width: "100%",
             },
             h1: {
                 marginTop: "10px",
@@ -102,7 +97,9 @@ class Products extends React.Component {
                             textShadow: `2px 2px 1px ${variables.black}`, color: `${variables.blue}`}}>Products</h1>
                     {this.props.data.allContentfulProductCategory.edges.map((item) => {
                         return (
-                            <div style={style.container}>
+                            <div style={style.container}
+                                key={`${item.node.id}${item.node.category}DIV`}
+                                >
                                 <div style={style.imageContainer}>
                                 <Img
                                     fluid={item.node.categoryImage.fluid
@@ -114,8 +111,9 @@ class Products extends React.Component {
                                 <ul>
                                     {item.node.product.vendors.map((thing) => {
                                         return (
-                                            <li key={thing.id} style={style.innerStyle}>
-                                                <a key={`${thing.id}${thing.url}`} 
+                                            <li key={`${thing.url}LI`} style={style.innerStyle}>
+                                                {/* {console.log(thing.url)} */}
+                                                <a key={`${thing.url}A`} 
                                                     href={thing.url} rel="noopener noreferrer">
                                                     <h2 key={`${thing.id}${thing.name}`}>{thing.name}</h2>
                                                 </a>

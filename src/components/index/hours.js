@@ -27,7 +27,7 @@ class Hours extends React.Component {
 
     render() {
         const h3Style = {
-            fontSize: `${this.state.width == true ? '1.2rem' : '2rem'}`,
+            fontSize: `${this.state.width ? '1.2rem' : '2rem'}`,
             fontWeight: '400',
             padding: '10px 0'
         }
@@ -50,7 +50,7 @@ class Hours extends React.Component {
                 <h2
                     style={{
                         textShadow: `4px 4px 1px ${variables.grey}`,
-                        fontSize: `${this.state.width == true ? '1.5rem' : '2.5rem'}`,
+                        fontSize: `${this.state.width ? '1.5rem' : '2.5rem'}`,
                         padding: '10px'
                     }}
                 >Hours of Operation</h2>

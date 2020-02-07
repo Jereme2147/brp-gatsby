@@ -21,7 +21,7 @@ const SmallImage = ({ path }) => {
     return (
         <div style={path.containerStyle}>
             {data.allImageSharp.nodes.map((item) => {
-                if (item.fluid.originalName == path.title) {
+                if (item.fluid.originalName === path.title) {
                     return (
                         <Img 
                             key={path.title}

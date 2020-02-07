@@ -4,8 +4,8 @@ import layoutStyles from "../styles/layout.module.scss"
 import Nav from "./nav/nav.js"
 import Footer from "./footer/footer.js";
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab, fakey } from "@fortawesome/free-brands-svg-icons"
-import { faCheckSquare, faCoffee, envelope } from "@fortawesome/free-solid-svg-icons"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
 library.add(fab,faCheckSquare, faCoffee)
 
 class Layout extends React.Component {

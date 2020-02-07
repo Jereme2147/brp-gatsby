@@ -9,6 +9,7 @@ import SmellGas from '../components/safety/smellGas.js'
 import TankOff from '../components/safety/tankOff.js'
 import ReadGuage from '../components/safety/readGuage.js'
 import Weather from '../components/safety/weather.js'
+import SafetyLinks from '../components/safety/safetyLinks.js'
 
 const Safety = () => {
     const style = {
@@ -111,7 +112,9 @@ const Safety = () => {
             <Weather />
           </SafetyBlock>
         </Section>
-        <Section></Section>
+        <Section>
+          <SafetyLinks />
+        </Section>
       </Layout>
     )
 }

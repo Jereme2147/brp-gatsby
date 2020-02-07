@@ -16,16 +16,32 @@ const Footer = () => {
         </div>
         <div className={footerStyles.socialAndLinks}>
           <div className={footerStyles.social}>
-            <a href="https://github.com/Jereme2147" target="_BLANK">
+            <a
+              href="https://www.facebook.com/blueridgepropane/"
+              target="_BLANK"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={["fab", "facebook"]} />
             </a>
-            <a href="mailto:jereme@jeremedaniels.com" target="_BLANK">
+            <a
+              href="mailto:jereme@jeremedaniels.com"
+              target="_BLANK"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
-            <a href="https://twitter.com/JD2147" target="_BLANK">
+            <a
+              href="https://twitter.com/JD2147"
+              target="_BLANK"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={["fab", "twitter"]} />
             </a>
-            <a href="https://www.instagram.com/jd2147/" target="_BLANK">
+            <a
+              href="https://www.instagram.com/jd2147/"
+              target="_BLANK"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={["fab", "instagram"]} />
             </a>
           </div>
@@ -34,7 +50,9 @@ const Footer = () => {
           </div>
         </div>
         <div className={footerStyles.dev}>
-            <h3>Designed and Developed by <a href="#">Jereme Daniels</a> | Gatsbyjs</h3>
+          <h3>
+            Designed and Developed by <a href="#">Jereme Daniels</a> | Gatsbyjs
+          </h3>
         </div>
       </div>
     )

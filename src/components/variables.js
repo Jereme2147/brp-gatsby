@@ -7,6 +7,7 @@ const Variables = {
   red: "rgba(163, 22, 33, 1)",
   blue: "rgba(78, 128, 152, 1)",
   grey: "rgba(206, 211, 220, 1)",
+  submit: "#0000FF",
   //banners and fullscreen images
   homeBanner: "trucksrear.jpg",
   landingBanner: "tanks2000.jpg",

@@ -10,7 +10,6 @@ class FormQuestions extends React.Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount")
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
     }
@@ -18,12 +17,9 @@ class FormQuestions extends React.Component {
         window.removeEventListener('resize', this.handleWindowSizeChange)
     }
     handleWindowSizeChange = () => {
-        console.log(window.innerWidth, "************* no enter")
         if (window.innerWidth < 950) {
-            console.log(window.innerWidth, "handle size < 950", this.state.width)
             this.setState({ width: true })
         } else {
-            console.log(window.innerWidth, "failed query")
             this.setState({ width: false })
         }
 

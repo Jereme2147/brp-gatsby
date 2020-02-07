@@ -41,7 +41,6 @@ class Video extends React.Component {
     }
     return (
       <div>
-        {console.log(this.props.videoTitle)}
         <iframe
             style={style.iframe}
           src={this.props.videoSrcURL}

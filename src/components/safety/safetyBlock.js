@@ -6,6 +6,7 @@ class SafetyBlock extends React.Component {
         this.state = {
             width: true,
             visible: false,
+            cursor: 'auto'
         }
         this.handleClick = this.handleClick.bind(this)
     }
@@ -32,18 +33,23 @@ class SafetyBlock extends React.Component {
             this.setState({visible: true})
         }
     }
-
+    enter = () => {
+        this.setState({cursor: 'pointer'})
+    }
+    exit = () => {
+        this.setState({cursor: 'auto'})
+    }
     render(props) {
         const style = {
           container: {
             display: "flex",
-            // flexDirection: `${this.state.width === true ? "column" : "row"}`,
             flexDirection: 'column',
             width: "100%",
             justifyContent: "space-around",
             alignItems: "center",
             padding: "20px 0",
-            fontSize: `${this.state.width === true ? "1.3rem" : "2rem"}`,
+            fontSize: `${this.state.width ? "1.3rem" : "2rem"}`,
+            cursor: `${this.state.cursor}`
           },
           div: {
             display: `${this.state.visible ? "flex" : "none"}`,
@@ -53,6 +59,8 @@ class SafetyBlock extends React.Component {
           <div 
             style={style.container}
             onClick={this.handleClick}
+            onMouseEnter={this.enter}
+            onMouseLeave={this.exit}
             >
             <h3>▼ Learn more ▼</h3>
             <div style={style.div}>{this.props.children}</div>

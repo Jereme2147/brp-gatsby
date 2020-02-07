@@ -22,9 +22,9 @@ const FullScreenImage = ({ fullImage }) => {
   return (
       <div>
         {data.allImageSharp.nodes.map((item) => {
-          if (item.fluid.originalName == fullImage) {
+          if (item.fluid.originalName === fullImage) {
             return (
-              <Img fluid={item.fluid} />
+              <Img fluid={item.fluid} key={item.fluid.originalName}/>
             )
           }
         })}

@@ -18,7 +18,6 @@ class BlogById extends React.Component {
     componentWillUnmount() {
     }
     click = () => {
-        console.log("clicked")
         if(this.state.height === '100px'){
             this.setState({
               height: "auto"
@@ -34,8 +33,10 @@ class BlogById extends React.Component {
         return (
             <div 
                 style={this.state}
-                onClick={this.click}>   
-                <BlogQuery id={this.props.id} />
+                onClick={this.click}
+                key={this.props.id}
+                >   
+                <BlogQuery id={this.props.id}/>
             </div>
         )
        

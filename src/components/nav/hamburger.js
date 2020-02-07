@@ -4,7 +4,6 @@ import React from 'react'
 import hamburgerStyles from '../../styles/hamburger.module.scss'
 import mobileMenuStyles from '../../styles/mobileMenu.module.scss'
 import MobileMenu from './mobileMenu.js'
-import { Link } from "gatsby"
 
 class Hamburger extends React.Component {
   constructor(props) {
@@ -16,7 +15,7 @@ class Hamburger extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
   handleClick = () => {
-    if (this.state.burgerClass.length == 2 ){
+    if (this.state.burgerClass.length === 2 ){
         this.setState({
           burgerClass: [
             hamburgerStyles.hamburger,
@@ -25,9 +24,7 @@ class Hamburger extends React.Component {
           ],
           isShowing: 1,
         })
-        console.log(this.state.isShowing)
     } else {
-        console.log(this.state.isShowing)
         this.setState({
           burgerClass: [
             hamburgerStyles.hamburger,
