@@ -48,11 +48,12 @@ class BlogSingle extends React.Component {
             marginTop: '10px'
         }
         const styleBody = {
-            marginTop: '10px'
+            marginTop: '10px',
+            fontSize: '1.4rem',
         }
         return (
           <div style={styleContainer}>
-            <h1 style={styleTitle}>Blue Ridge Propane Blog</h1>
+            <h1 style={styleTitle}>Blue Ridge Propane Articles</h1>
             <div style={styleMeta}>
               <GetBlogTitle />
               <GetBlogDate /> 
@@ -65,7 +66,7 @@ class BlogSingle extends React.Component {
             to={"/blog"}
             style={{width: "100%", textAlign: "center", margin: "20px 0"}}
             >
-              <h2>-All Articles-</h2>
+              <h2 style={{ fontSize: "1.5rem"}}>-All Articles-</h2>
             </Link>
           </div>
         )

@@ -20,13 +20,15 @@ const Footer = () => {
               href="https://www.facebook.com/blueridgepropane/"
               target="_BLANK"
               rel="noopener noreferrer"
+              alt="link to facebook page"
             >
               <FontAwesomeIcon icon={["fab", "facebook"]} />
             </a>
             <a
-              href="mailto:jereme@jeremedaniels.com"
+              href="mailto:blueridgepropanenc@gmail.com"
               target="_BLANK"
               rel="noopener noreferrer"
+              alt="Email link"
             >
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
@@ -34,6 +36,7 @@ const Footer = () => {
               href="https://twitter.com/JD2147"
               target="_BLANK"
               rel="noopener noreferrer"
+              alt="Link to twitter page"
             >
               <FontAwesomeIcon icon={["fab", "twitter"]} />
             </a>
@@ -41,6 +44,7 @@ const Footer = () => {
               href="https://www.instagram.com/jd2147/"
               target="_BLANK"
               rel="noopener noreferrer"
+              alt="link to instagram page"
             >
               <FontAwesomeIcon icon={["fab", "instagram"]} />
             </a>

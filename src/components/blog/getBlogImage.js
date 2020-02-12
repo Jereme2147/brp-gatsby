@@ -14,7 +14,7 @@ const GetBlogImage = () => {
           title
           id
           blogImage {
-            fluid(maxWidth: 800, quality: 100) {
+            fluid(maxWidth: 350, quality: 100) {
               ...GatsbyContentfulFluid_withWebp
             }
           }
@@ -35,6 +35,7 @@ const GetBlogImage = () => {
                 style={{
                   margin: "20px 0",
                   boxShadow: `3px 3px 3px ${variables.black}`,
+                  width: "350px"
                 }}
               />
             )

@@ -16,7 +16,7 @@ const BlogQuery = ({ id }) => {
           title
           id
           blogImage {
-            fluid(maxWidth: 800, quality: 100) {
+            fluid(maxWidth: 350, quality: 100) {
               ...GatsbyContentfulFluid_withWebp
             }
           }
@@ -29,7 +29,7 @@ const BlogQuery = ({ id }) => {
     {data.allContentfulBlog.nodes.map((item) => {
         if(id === item.id && item.blogImage){
             return (
-              <div key={item.id}>
+              <div style={{width: "100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center'}}key={item.id}>
                 <h2>
                   {item.title}
                   <span style={{ fontWeight: "400" }}>
@@ -48,6 +48,7 @@ const BlogQuery = ({ id }) => {
                   style={{
                     margin: "20px 0",
                     boxShadow: `3px 3px 3px ${variables.black}`,
+                    width: '350px',
                   }}
                 />
               </div>
