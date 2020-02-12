@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Banner from "../components/banner/banner.js"
 import variables from "../components/variables.js"
 import BlogById from "../components/blog/getBlogById"
+import Head from "../components/head.js"
 
 export const data = graphql`
          query{
@@ -47,20 +48,9 @@ class Blog extends React.Component {
         document.getElementById(id).style.height = 'auto'
     }
     render() {
-
-        // const style = {
-        //     container: {
-        //     display: "flex",
-        //     flexDirection: `column`,
-        //     width: "100%",
-        //     justifyContent: "space-around",
-        //     alignItems: "center",
-        //     padding: "20px 0",
-        //     fontSize: `${this.state.width === true ? "1.3rem" : "2rem"}`,
-        //   },
-        // }
         return (
           <Layout>
+            <Head title={"Articles"} />
             <Banner banner={variables.homeBanner} />
               <div >
                   {this.props.data.allContentfulBlog.nodes.map((item) => {

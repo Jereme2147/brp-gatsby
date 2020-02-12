@@ -8,6 +8,7 @@ import BlogSingle from "../components/blogSingle.js"
 import Hours from "../components/index/hours.js"
 import FullScreenImage from "../components/fullScreenImage.js"
 import Map from "../components/index/map.js"
+import Head from '../components/head.js'
 
 class IndexPage extends React.Component {
     constructor(props) {
@@ -49,6 +50,7 @@ class IndexPage extends React.Component {
         }
         return (
             <Layout>
+                <Head title={'Home'} />
                 <Banner banner={variables.homeBanner} />
                 <Section>
                     <div>

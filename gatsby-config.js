@@ -8,9 +8,9 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "brp/",  // uncomment for build!!!!!!!!!!!!!!!!!!!!!!!!
+  pathPrefix: "brp/", // uncomment for build!!!!!!!!!!!!!!!!!!!!!!!!
   siteMetadata: {
-    title: "Blue Ridge Propane",
+    title: "Blue Ridge Propane NC",
     author: "Jereme Daniels",
   },
   plugins: [
@@ -20,9 +20,10 @@ module.exports = {
         // spaceId: process.env.CONTENTFUL_SPACE_ID,
         // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
         spaceId: "kl4449kc17a7",
-        accessToken: "dd5Vgaw8ZtE4RYhTL-QyBcVYdd_JDs6ZkuzJsSzqz5Y"
+        accessToken: "dd5Vgaw8ZtE4RYhTL-QyBcVYdd_JDs6ZkuzJsSzqz5Y",
       },
     },
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

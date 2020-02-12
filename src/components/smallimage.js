@@ -3,6 +3,14 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 //pass title, ALT as text, style as object in as object. See ServiceList
 //full passed in components: "path" "alt text" {style.image} {style.container}
+{/* <SmallImage
+                path={{
+                  title: Variables.truck500,
+                  alt: "delivery truck",
+                  style: style.image,
+                  containerStyle: style.imageContainer,
+                }}
+              /> */}
 const SmallImage = ({ path }) => {
   const data = useStaticQuery(graphql`
   query{
@@ -14,7 +22,7 @@ const SmallImage = ({ path }) => {
           originalName
         }
         }
-      }
+      } 
   }
 `)
     // //****** this works for choosing passed in image!!! only 5 fucking hours! */

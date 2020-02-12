@@ -68,9 +68,10 @@ class Form extends React.Component {
         return (
             <form
                 style={FormStyle.form}
-                action="/brp/mail.php"
+                // action="/brp/mail.php"
                 id="contact-form"
                 method="POST"
+                data-netlify="true"
             >
                 <input
                     style={FormStyle.input}

@@ -3,6 +3,7 @@ import variables from "../components/variables.js"
 import Layout from "../components/layout.js"
 import Banner from "../components/banner/banner.js"
 import Section from '../components/section.js'
+import Head from "../components/head.js"
 
 class BillPay extends React.Component {
   constructor(props) {
@@ -73,6 +74,7 @@ class BillPay extends React.Component {
     }
     return (
       <Layout>
+        <Head title={"Pay"} />
         <Banner banner={variables.safetyBanner} />
         <Section>
           <div style={style.container}>

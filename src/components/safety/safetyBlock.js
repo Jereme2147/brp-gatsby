@@ -53,6 +53,7 @@ class SafetyBlock extends React.Component {
           },
           div: {
             display: `${this.state.visible ? "flex" : "none"}`,
+            width: "100%",
           },
         }
         return (

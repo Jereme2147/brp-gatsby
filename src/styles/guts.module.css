@@ -87,7 +87,6 @@ h3, h4, h5, h6, p, li {
     border-radius: 50%;
     align-self: center;
     justify-self: center;
-    margin-left: auto;
   }
 }
 
@@ -143,6 +142,6 @@ h3, h4, h5, h6, p, li {
 
 @media (min-width: 950px) {
   .fadeInLogo img {
-    height: 60%;
+    height: 80%;
   }
 }

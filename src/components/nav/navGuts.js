@@ -38,7 +38,7 @@ class NavGuts extends React.Component {
   }
   
   render() {
-    
+     
    return (
      <div className={gutsStyles.gutsContainer}>
        <div

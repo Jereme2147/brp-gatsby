@@ -93,7 +93,7 @@ class ServiceList extends React.Component {
                   </li>
                   <li style={{ padding: "10px" }}>
                     <h2>Appliance Sales</h2>
-                    <ul style={{ marginLeft: "20px" }}>
+                    <ul style={{ marginLeft: "20px" }}> 
                       <li>Water Heaters</li>
                       <li>Fire Logs</li>
                       <li>Room Heaters</li>

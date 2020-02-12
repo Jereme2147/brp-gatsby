@@ -16,12 +16,16 @@ const Variables = {
   safetyBanner: "safetyBanner.jpg",
   // small servcies images
   truck500: "truck500.jpg",
+  serviceInstallation: "trackhotank600.jpg",
+  serviceDelivery: "serviceDelivery.jpeg",
+  serviceRange: "range.jpg",
   //safety pics
   smellGas: "smellGas.jpg",
   tankOff: "brptank.jpg",
   gauge: "gauge.jpg",
   weather: "weather.jpg",
-  
-
+  tankOffVid: "tankOff.jpg",
+  readGauge: "readGuage.jpg",
+  map: "map-1.jpg",
 }
 export default Variables;

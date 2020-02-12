@@ -10,6 +10,7 @@ import TankOff from '../components/safety/tankOff.js'
 import ReadGuage from '../components/safety/readGuage.js'
 import Weather from '../components/safety/weather.js'
 import SafetyLinks from '../components/safety/safetyLinks.js'
+import Head from "../components/head.js"
 
 const Safety = () => {
     const style = {
@@ -25,6 +26,7 @@ const Safety = () => {
     }
     return (
       <Layout>
+        <Head title={"LP Safety"} />
         <Banner banner={variables.safetyBanner} />
         <h1
           style={{
@@ -53,7 +55,7 @@ const Safety = () => {
                 justifyContent: "center",
               },
             }}
-          />
+          /> 
           <SafetyBlock>
             <SmellGas />
           </SafetyBlock>

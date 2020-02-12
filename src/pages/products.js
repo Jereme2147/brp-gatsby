@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Section from "../components/section"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import Head from "../components/head.js"
 
 export const data = graphql`
          query {
@@ -91,6 +92,7 @@ class Products extends React.Component {
         }
         return (
             <Layout>
+                <Head title={"Products"} />
                 <Banner banner={variables.homeBanner} />
                 <Section>
                 <h1 style={{width: "100%", textAlign: "center", fontSize: "2.5rem", marginTop: "10px",
