@@ -61,7 +61,7 @@ class BlogSingle extends React.Component {
             <GetBlogImage />
             <div style={styleBody}>
               <GetBlog />
-            </div>
+            </div> 
             <Link 
             to={"/blog"}
             style={{width: "100%", textAlign: "center", margin: "20px 0"}}

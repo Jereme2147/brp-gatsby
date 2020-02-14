@@ -52,39 +52,42 @@
      
     opacity: 0;
      display: flex;
-     width: 50%;
-     @include desktop() {
-        opacity:0;
-        transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
-         width: 25%;
-     }
-     img {
-         height: 50%;
-         border-radius: 5px;
-         align-self: center;
-         justify-self: center;
-         margin-left: auto;
-         @include desktop(){
-             height: 60%;
-         }
-     }
+    width: 50%;
+    @include desktop() {
+       opacity:0;
+       transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+        width: 25%;
+    }
+    img {
+        height: 50%;
+        border-radius: 5px;
+        align-self: center;
+        justify-self: center;
+        margin-left: auto;
+        @include desktop(){
+            height: 60%;
+        }
+    }
 
 }
 .fadeInLogo{
-     opacity:1;
-     transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
-     display: flex;
-     width: 50%;
-    text-align: center;
+    opacity:1;
+    transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    // text-align: center;
+    justify-content: center;
      @include desktop() {
          width: 25%;
      }
      img {
-         height: 50%;
+        //  height: 50%;
+        width: 90%;
          border-radius: 5px;
          align-self: center;
-         justify-self: center;
-         margin-left: auto;
+        //  justify-self: center;
+        //  margin-left: auto;
          @include desktop(){
              height: 80%;
          }

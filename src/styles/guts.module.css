@@ -122,8 +122,9 @@ h3, h4, h5, h6, p, li {
   opacity: 1;
   transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
   display: flex;
+  flex-direction: row;
   width: 50%;
-  text-align: center;
+  justify-content: center;
 }
 
 @media (min-width: 950px) {
@@ -133,11 +134,9 @@ h3, h4, h5, h6, p, li {
 }
 
 .fadeInLogo img {
-  height: 50%;
+  width: 90%;
   border-radius: 5px;
   align-self: center;
-  justify-self: center;
-  margin-left: auto;
 }
 
 @media (min-width: 950px) {
