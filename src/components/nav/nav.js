@@ -10,10 +10,7 @@ class Nav extends React.Component {
     this.state = {
       containerStyle: {
         height: "20vh",
-      },
-      logoStyle: {
-          
-      },
+      }
     }
   }
   componentDidMount() {

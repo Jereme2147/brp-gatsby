@@ -58,7 +58,7 @@ class Map extends React.Component {
                 width: "100%"
               }}
             >
-              <h3 style={{width: '100%', textAlign: 'center'}}>
+              <h3 style={{textAlign: 'center'}}>
                 Call, Click, or stop in to <Link to={"/contact"}>connect</Link>{" "}
                 with us.
               </h3>{" "}

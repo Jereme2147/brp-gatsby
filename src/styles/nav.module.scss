@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    // width: 100vw;
     // background: linear-gradient(to top, rgba(125,185,232,0) 0%, #4e8098 100%);
     background: linear-gradient(to top, rgba(125,185,232,0) 0%, $blue 100%);
     @include desktop() {

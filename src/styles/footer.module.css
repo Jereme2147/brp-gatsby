@@ -35,7 +35,7 @@ h2 {
   font-family: 'Jaldi', sans-serif;
 }
 
-h3, h4, h5, h6, p {
+h3, h4, h5, h6, p, li {
   font-family: 'Molengo', sans-serif;
 }
 
@@ -116,7 +116,7 @@ h3, h4, h5, h6, p {
 
 .links {
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 10px;
   width: 50%;
   justify-content: center;

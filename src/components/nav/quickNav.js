@@ -19,4 +19,4 @@
      )
  }
 
- export default QuickNav
+ export default QuickNav 
