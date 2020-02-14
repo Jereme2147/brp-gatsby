@@ -138,9 +138,3 @@ h3, h4, h5, h6, p, li {
   border-radius: 5px;
   align-self: center;
 }
-
-@media (min-width: 950px) {
-  .fadeInLogo img {
-    height: 80%;
-  }
-}
