@@ -11,7 +11,7 @@ class NavGuts extends React.Component {
     this.state = {
       containerStyle: {
           visible: true
-      },
+      }, 
     }
   }
   componentDidMount() {

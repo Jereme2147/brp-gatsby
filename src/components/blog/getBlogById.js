@@ -1,5 +1,6 @@
 import React from "react"
-import BlogQuery from "./blogQuery"
+import BlogQuery from "./blogQuery.js"
+import BlogQueryExpanded from './blogQuery-expanded.js'
 
 class BlogById extends React.Component {
     constructor(props) {
@@ -30,17 +31,15 @@ class BlogById extends React.Component {
         }
     }
     render() {
-        return (
-            <div 
-                style={this.state}
-                onClick={this.click}
-                key={this.props.id}
-                >   
-                <BlogQuery id={this.props.id}/>
-            </div>
-        )
-       
-    }
+            return (
+              <div style={this.state} onClick={this.click} key={this.props.id}>
+                <BlogQuery id={this.props.id} />
+              </div>
+            )
+        }
+        
+    
+    
 }
 
 

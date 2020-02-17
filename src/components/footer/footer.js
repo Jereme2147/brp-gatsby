@@ -21,6 +21,7 @@ const Footer = () => {
               target="_BLANK"
               rel="noopener noreferrer"
               alt="link to facebook page"
+              aria-label="Facebook Page"
             >
               <FontAwesomeIcon icon={["fab", "facebook"]} />
             </a>
@@ -29,6 +30,7 @@ const Footer = () => {
               target="_BLANK"
               rel="noopener noreferrer"
               alt="Email link"
+              aria-label="Email Link"
             >
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
@@ -37,6 +39,7 @@ const Footer = () => {
               target="_BLANK"
               rel="noopener noreferrer"
               alt="Link to twitter page"
+              aria-label="Twitter page"
             >
               <FontAwesomeIcon icon={["fab", "twitter"]} />
             </a>
@@ -45,6 +48,7 @@ const Footer = () => {
               target="_BLANK"
               rel="noopener noreferrer"
               alt="link to instagram page"
+              aria-label="Instagram page"
             >
               <FontAwesomeIcon icon={["fab", "instagram"]} />
             </a>

@@ -5,4 +5,7 @@
     width: 50%;
     border-radius: 2px;
     margin: 10px;
+    @include desktop() {
+        width: 30%;
+    }
 }

@@ -14,7 +14,7 @@ const GetBlogImage = () => {
           }
           date
           title
-          id
+          id 
           blogImage {
             fluid(maxWidth: 350, quality: 100) {
               ...GatsbyContentfulFluid_withWebp

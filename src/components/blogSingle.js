@@ -57,7 +57,7 @@ class BlogSingle extends React.Component {
             <div style={styleMeta}>
               <GetBlogTitle />
               <GetBlogDate /> 
-            </div>
+            </div> 
             <GetBlogImage />
             <div style={styleBody}>
               <GetBlog />

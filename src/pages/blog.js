@@ -44,23 +44,26 @@ class Blog extends React.Component {
         }
 
     }
-    setStyle = (id) => {
-        document.getElementById(id).style.height = 'auto'
-    }
     render() {
         return (
           <Layout>
             <Head title={"Articles"} />
             <Banner banner={variables.homeBanner} />
-              <div >
-                  {this.props.data.allContentfulBlog.nodes.map((item) => {
-                    return (
-                      <Section key={item.id}>
-                        <BlogById id={item.id} key={item.id}/>
-                      </Section>
-                    )
-                  })}
-              </div>
+            <div>
+              {this.props.data.allContentfulBlog.nodes.map(item => {
+                return (
+                  <Section key={item.id}>
+                    <BlogById
+                      id={item.id}
+                      key={item.id}
+                    />
+                    
+                  </Section>
+                )
+              
+              })
+              }
+            </div>
           </Layout>
         )
     }
