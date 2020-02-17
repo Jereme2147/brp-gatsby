@@ -61,10 +61,12 @@ h3, h4, h5, h6, p, li {
     opacity: 0;
     transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25%;
   }
   .fadeOutMap img {
-    height: 75%;
+    height: 150px;
     border-radius: 50%;
     align-self: center;
     justify-self: center;
@@ -80,12 +82,14 @@ h3, h4, h5, h6, p, li {
     opacity: 1;
     transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 25%;
   }
   .fadeInMap img {
-    height: 75%;
+    height: 150px;
     border-radius: 50%;
-    align-self: center;
   }
 }
 
@@ -104,7 +108,7 @@ h3, h4, h5, h6, p, li {
 }
 
 .fadeOutLogo img {
-  height: 50%;
+  width: 90%;
   border-radius: 5px;
   align-self: center;
   justify-self: center;
