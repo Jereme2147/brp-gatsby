@@ -55,7 +55,7 @@ class IndexPage extends React.Component {
                 <Section>
                     <div>
                         <h1 style={h1Style}>
-                            SERVING THE HIGH COUNTRIES PROPANE NEEDS IN WESTERN NC AND EASTERN TN SINCE 1992
+                            SERVING THE HIGH COUNTRY'S PROPANE NEEDS IN WESTERN NC AND EASTERN TN SINCE 1992
                     </h1>
                         <div style={imgDivStyle}>
                             <img

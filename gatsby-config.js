@@ -5,13 +5,16 @@
  */
 // npm i @contentful/rich-text-react-renderer
 //gatsby build --prefix-paths
-
+//DEAL WITH CONTACT FORM!!!!!!!!!!!!!!!!!!!!!!!!
+//google HTML file!!!!!!!!!!!!!!!
+//both go in root "src" and must be moved manually to root.
 module.exports = {
   /* Your site config here */
   // pathPrefix: "brp/", // uncomment for build!!!!!!!!!!!!!!!!!!!!!!!!
   siteMetadata: {
     title: "Blue Ridge Propane NC",
     author: "Jereme Daniels",
+    siteUrl: "https://www.blueridgepropanenc.net/",
   },
   plugins: [
     {
@@ -24,6 +27,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

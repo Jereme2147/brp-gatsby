@@ -28,6 +28,7 @@
     "gatsby-plugin-sass": "^2.1.26",
     "gatsby-plugin-segment-js": "^3.1.0",
     "gatsby-plugin-sharp": "^2.3.13",
+    "gatsby-plugin-sitemap": "^2.2.27",
     "gatsby-source-contentful": "^2.1.86",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.12",

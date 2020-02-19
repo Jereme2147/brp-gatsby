@@ -35,7 +35,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
             <a
-              href="https://twitter.com/JD2147"
+              href="https://twitter.com/blueridgepropane"
               target="_BLANK"
               rel="noopener noreferrer"
               alt="Link to twitter page"
@@ -44,7 +44,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={["fab", "twitter"]} />
             </a>
             <a
-              href="https://www.instagram.com/jd2147/"
+              href="https://www.instagram.com/blueridgepropane/"
               target="_BLANK"
               rel="noopener noreferrer"
               alt="link to instagram page"
