@@ -35,7 +35,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
             <a
-              href="https://twitter.com/blueridgepropane"
+              href="https://twitter.com/PropaneBlue"
               target="_BLANK"
               rel="noopener noreferrer"
               alt="Link to twitter page"

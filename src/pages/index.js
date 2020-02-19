@@ -68,7 +68,7 @@ class IndexPage extends React.Component {
                             />
                         </div>
                         <h3 style={{ fontSize: `${this.state.width ? '1.5rem' : '2rem'}`, padding: '5px 20px', marginTop: '25px' }}>
-                            Your only locally owned and operated bull servicer propane company
+                            Your only locally owned and operated full service propane company
                             based in Avery County NC and serving Carter County TN by people you know
                             from your community.
                     </h3>
