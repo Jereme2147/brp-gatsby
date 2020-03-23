@@ -10,7 +10,7 @@ class Banner extends React.Component {
             banner: this.props.banner,
         }
     }
-
+ 
     componentDidMount() {
         this.handleWindowSizeChange() 
         window.addEventListener('resize', this.handleWindowSizeChange)

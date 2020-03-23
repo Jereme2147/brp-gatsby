@@ -9,7 +9,7 @@ class FormQuestions extends React.Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount() { 
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
     }

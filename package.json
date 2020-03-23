@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
@@ -22,6 +24,8 @@
     "gatsby": "^2.18.12",
     "gatsby-cli": "^2.8.29",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-emotion": "^4.1.24",
+    "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-google-gtag": "^1.1.22",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-prefix": "^0.1.1",

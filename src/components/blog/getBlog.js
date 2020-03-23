@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import style from "./getBlog.module.scss"
 
 const GetBlog = () => {
 const data = useStaticQuery(graphql`
@@ -16,7 +17,7 @@ const data = useStaticQuery(graphql`
 `)
     
     return (
-        <div>{documentToReactComponents( data.allContentfulBlog.nodes[0].content.json )}</div>
+        <div className={style.inner}>{documentToReactComponents( data.allContentfulBlog.nodes[0].content.json )}</div>
     )
 }
 

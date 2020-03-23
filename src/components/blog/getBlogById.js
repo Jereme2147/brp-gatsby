@@ -10,7 +10,7 @@ class BlogById extends React.Component {
             overflow: 'hidden',
             padding: '20px 5px',
             fontSize: '1.5rem',
-            marginBottom: '30px'
+            marginBottom: '30px',
         }
     }
 

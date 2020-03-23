@@ -7,7 +7,7 @@ class ServicePropaneAppliances extends React.Component {
     super()
     this.state = {
       width: true,
-    }
+    } 
   }
 
   componentDidMount() {

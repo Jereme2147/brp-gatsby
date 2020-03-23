@@ -35,7 +35,7 @@ class Layout extends React.Component {
                 <Nav />
                 {this.props.children}
                 <Footer />
-            </div>
+            </div> 
         )
     }
 }

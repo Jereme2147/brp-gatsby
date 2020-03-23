@@ -1,3 +1,20 @@
+need to edit:
+banner.js
+form.js
+formQuestions.js
+hours.js
+map.js
+history.js
+propaneDelivery.js
+safeinstallation.js
+serviceList.js
+servicePropaneAppliances.js
+blogSingle.js
+layout.js
+section.js
+
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

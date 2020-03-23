@@ -13,7 +13,7 @@ const innerStyle = {
     width: "100%",
     maxWidth: "1000px",
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap', 
     justifyContent: 'space-around',
 }
 

@@ -9,7 +9,7 @@ class ServiceList extends React.Component {
         this.state = {
             width: true,
         }
-    }
+    } 
 
     componentDidMount() {
         this.handleWindowSizeChange() // Set width

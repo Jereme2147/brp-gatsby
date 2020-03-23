@@ -56,7 +56,10 @@ class IndexPage extends React.Component {
                     <div>
                         <h1 style={h1Style}>
                             SERVING THE HIGH COUNTRY'S PROPANE NEEDS IN WESTERN NC AND EASTERN TN SINCE 1992
-                    </h1>
+                        </h1>
+                        {/* remove the following line after covid */}
+                        <h2 style={{color: `${variables.red}`, fontSize: '2rem', textAlign: 'center', marginTop: '20px', textShadow: `2px 2px 2px ${variables.white}`, padding: '5px'}}>We are practicing social Distancing!</h2>
+                        {/* remove above line */}
                         <div style={imgDivStyle}>
                             <img
                                 style={{

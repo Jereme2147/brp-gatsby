@@ -8,7 +8,7 @@ class Hours extends React.Component {
             width: true,
             }
         }
-    
+     
     componentDidMount() {
         this.handleWindowSizeChange() // Set width
         window.addEventListener('resize', this.handleWindowSizeChange)
