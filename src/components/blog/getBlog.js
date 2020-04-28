@@ -18,6 +18,7 @@ const data = useStaticQuery(graphql`
     
     return (
         <div className={style.inner}>{documentToReactComponents( data.allContentfulBlog.nodes[0].content.json )}</div>
+        // <div></div>
     )
 }
 
