@@ -1,9 +1,58 @@
+//BLOG PAGE ! NOT LANDING !!! 
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import Img from "gatsby-image"
 import variables from "../variables.js"
 import styles from "./allBlogs.module.scss"
+
+const Bold = ({ children }) => <span className="boldText">{children}</span>
+const Text = ({ children }) => <p className="align-center">{children}</p>
+// const Picture = ({ children }) => <div>{children}</div>
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+  },
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: node => {
+      const { title, description, file } = node.data.target.fields
+      const mimeType = file["en-US"].contentType
+      const mimeGroup = mimeType.split("/")[0]
+
+      switch (mimeGroup) {
+        case "image":
+          return (
+            <img
+              title={title ? title["en-US"] : null}
+              alt={description ? description["en-US"] : null}
+              src={file["en-US"].url}
+              className={styles.imbedImage}
+            />
+          )
+        case "application":
+          return (
+            <a
+              alt={description ? description["en-US"] : null}
+              href={file["en-US"].url}
+            >
+              {title ? title["en-US"] : file["en-US"].details.fileName}
+            </a>
+          )
+        default:
+          return (
+            <span style={{ backgroundColor: "red", color: "white" }}>
+              {" "}
+              {mimeType} embedded asset{" "}
+            </span>
+          )
+      }
+    },
+  },
+}
 
 const BlogQuery = ({ id }) => {
   const data = useStaticQuery(graphql`
@@ -20,6 +69,11 @@ const BlogQuery = ({ id }) => {
             fluid(maxWidth: 350, quality: 100) {
               ...GatsbyContentfulFluid_withWebp
             }
+          }
+          childContentfulBlogContentRichTextNode {
+            id
+            content
+            json
           }
         }
       }
@@ -49,7 +103,10 @@ const BlogQuery = ({ id }) => {
                 </h2>
                 <h3>{item.date}</h3>
                 <div className={styles.inner}>
-                  {documentToReactComponents(item.content.json)}
+                  {documentToReactComponents(
+                    item.childContentfulBlogContentRichTextNode.json,
+                    options
+                  )}
                 </div>
                 <Img
                   key={item.id}
@@ -65,7 +122,16 @@ const BlogQuery = ({ id }) => {
             ) 
         }else if(id === item.id) { // so it doesn't break if there's no image. 
             return (
-              <div key={item.id}>
+              <div
+                key={item.id}
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <h2>
                   {item.title}
                   <span style={{ fontWeight: "400" }}>
@@ -75,7 +141,10 @@ const BlogQuery = ({ id }) => {
                 </h2>
                 <h3>{item.date}</h3>
                 <div className={styles.inner}>
-                  {documentToReactComponents(item.content.json)}
+                  {documentToReactComponents(
+                    item.childContentfulBlogContentRichTextNode.json,
+                    options
+                  )}
                 </div>
               </div>
             )

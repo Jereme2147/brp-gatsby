@@ -1,4 +1,7 @@
+@import "../../styles/reset.scss";
 .inner {
+    display: flex;
+    flex-direction: column;
     p {
         margin: 10px;
         line-height: 1.2;
@@ -6,7 +9,21 @@
     ol {
         margin: 15px;
     }
+    ul { 
+        margin: 20px;
+    }
     p b {
         font-weight: 900;
     }
+}
+.imbedImage {
+    width: 100%;
+    max-width: 350px;
+    align-self: center;
+    border-radius: 3px;
+    box-shadow: 4px 4px 2px darken($grey, 10%);
+
+}
+.boldText {
+    font-weight: 900;
 }

@@ -24,6 +24,7 @@ module.exports = {
         // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
         spaceId: "kl4449kc17a7",
         accessToken: "dd5Vgaw8ZtE4RYhTL-QyBcVYdd_JDs6ZkuzJsSzqz5Y",
+        downloadLocal: true,
       },
     },
     "gatsby-plugin-react-helmet",

@@ -9,6 +9,7 @@ const BannerQuery = ({ banner }) => {
       query {
         allImageSharp {
           nodes {
+            id
             fluid(maxWidth: 1900, quality: 50) {
               ...GatsbyImageSharpFluid_withWebp
               srcSetWebp
@@ -29,13 +30,13 @@ const BannerQuery = ({ banner }) => {
                         <div className={bannerStyle.bannerImage} key={banner} >
                             <Img
                                 fluid={item.fluid}
-                                key={item.fluid.originalName}
+                                key={item.id}
                             />
                         </div>
                     )
                 }
                 else {
-                    return <div key={item.fluid.originalName}></div>
+                    return <div key={item.id}></div>
                 }
             })}
 

@@ -1,6 +1,6 @@
 import React from "react"
 import BlogQuery from "./blogQuery.js"
-import BlogQueryExpanded from './blogQuery-expanded.js'
+// import BlogQueryExpanded from './blogQuery-expanded.js'
 
 class BlogById extends React.Component {
     constructor(props) {
