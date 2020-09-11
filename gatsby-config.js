@@ -8,6 +8,7 @@
 //DEAL WITH CONTACT FORM!!!!!!!!!!!!!!!!!!!!!!!!
 //google HTML file!!!!!!!!!!!!!!!
 //both go in root "src" and must be moved manually to root.
+require("dotenv").config()
 module.exports = {
   /* Your site config here */
   // pathPrefix: "brp/", // uncomment for build!!!!!!!!!!!!!!!!!!!!!!!!
@@ -23,7 +24,7 @@ module.exports = {
         // spaceId: process.env.CONTENTFUL_SPACE_ID,
         // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
         spaceId: "kl4449kc17a7",
-        accessToken: "dd5Vgaw8ZtE4RYhTL-QyBcVYdd_JDs6ZkuzJsSzqz5Y",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         downloadLocal: true,
       },
     },
@@ -32,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [
+        fonts: [ 
           {
             family: `Muli`,
           },
