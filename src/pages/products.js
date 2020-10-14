@@ -95,8 +95,8 @@ class Products extends React.Component {
                 <Head title={"Products"} />
                 <Banner banner={variables.homeBanner} />
                 <Section>
-                <h1 style={{width: "100%", textAlign: "center", fontSize: "2.5rem", marginTop: "10px",
-                            textShadow: `2px 2px 1px ${variables.black}`, color: `${variables.blue}`}}>Products</h1>
+                <h1 alt="gas appliances"style={{width: "100%", textAlign: "center", fontSize: "2.5rem", marginTop: "10px",
+                            textShadow: `2px 2px 1px ${variables.black}`, color: `${variables.blue}`}}>Propane Appliances</h1>
                     {this.props.data.allContentfulProductCategory.edges.map((item) => {
                         return (
                             <div style={style.container}

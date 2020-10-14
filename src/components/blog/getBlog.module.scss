@@ -10,7 +10,8 @@
         margin: 15px;
     }
     ul { 
-        margin: 20px;
+        margin-left: 30px;
+        // padding: 10px;
     }
     p b {
         font-weight: 900;
@@ -18,7 +19,7 @@
 }
 .imbedImage {
     width: 100%;
-    max-width: 350px;
+    max-width: 600px;
     align-self: center;
     border-radius: 3px;
     box-shadow: 4px 4px 2px darken($grey, 10%);

@@ -20,7 +20,7 @@ export const data = graphql`
              }
            }
          }
-       `
+       ` 
 class Blog extends React.Component {
     constructor(props) {
         super(props);

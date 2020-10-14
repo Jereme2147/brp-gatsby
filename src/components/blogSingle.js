@@ -71,6 +71,6 @@ class BlogSingle extends React.Component {
           </div>
         )
     }
-}
+} 
 
 export default BlogSingle

@@ -27,6 +27,11 @@ const Head = ({ title }) => {
           name="description"
           content="Number 1 trusted Propane delivery and service in the High Country. Friendly full service delivery, service and sales. Serving NC and TN. Avery | Watauga | Carter counties."
         />
+        <meta
+          property="description"
+          name="description"
+          content="Propane Sales. Gas Appliances. Propane Appliances. Propane Delivery."
+        />
       </Helmet>
     )
 }
