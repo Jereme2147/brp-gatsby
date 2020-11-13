@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import variables from "../variables.js"
 import styles from "./allBlogs.module.scss"
 
-const Bold = ({ children }) => <span className="boldText">{children}</span>
+const Bold = ({ children }) => <span className={styles.boldText}>{children}</span>
 const Text = ({ children }) => <p className="align-center">{children}</p>
 // const Picture = ({ children }) => <div>{children}</div>
 const options = {

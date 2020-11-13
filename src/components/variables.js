@@ -14,6 +14,7 @@ const Variables = {
   contactBanner: "office-picture.jpg",
   servicesBanner: "bottomBanner.jpg",
   safetyBanner: "safetyBanner.jpg",
+  productBanner: "showroom-good.jpg",
   // small servcies images
   truck500: "truck500.jpg",
   serviceInstallation: "trackhotank600.jpg",

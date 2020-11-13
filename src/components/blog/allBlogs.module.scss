@@ -1,3 +1,4 @@
+//for blog page not landing
 @import "../../styles/reset.scss";
 .inner {
     display: flex;
@@ -32,5 +33,5 @@
 
 }
 .boldText {
-    font-weight: 900;
+    text-shadow: 1px 1px 1px $black;
 }

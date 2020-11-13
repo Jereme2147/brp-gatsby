@@ -92,8 +92,8 @@ class Products extends React.Component {
         }
         return (
             <Layout>
-                <Head title={"Products"} />
-                <Banner banner={variables.homeBanner} />
+                <Head title={"Gas Appliances"} />
+                <Banner banner={variables.productBanner} />
                 <Section>
                 <h1 alt="gas appliances"style={{width: "100%", textAlign: "center", fontSize: "2.5rem", marginTop: "10px",
                             textShadow: `2px 2px 1px ${variables.black}`, color: `${variables.blue}`}}>Propane Appliances</h1>
