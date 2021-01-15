@@ -1,15 +1,16 @@
 import React from "react"
 import BlogQuery from "./blogQuery.js"
 // import BlogQueryExpanded from './blogQuery-expanded.js'
+import style from "./blogPage.module.scss"
 
 class BlogById extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            height: '100px',
+            height: '40px',
             overflow: 'hidden',
             padding: '20px 5px',
-            fontSize: '1.5rem',
+            // fontSize: '1.5rem',
             marginBottom: '30px',
         }
     }
@@ -19,20 +20,20 @@ class BlogById extends React.Component {
     componentWillUnmount() {
     }
     click = () => {
-        if(this.state.height === '100px'){
+        if(this.state.height === '40px'){
             this.setState({
               height: "auto"
             })
         }else {
             this.setState({
-            height: '100px',
+            height: '40px',
             overflow: 'hidden'
         })
         }
     }
     render() {
             return (
-              <div style={this.state} onClick={this.click} key={this.props.id}>
+              <div style={this.state} className={style.main}onClick={this.click} key={this.props.id}>
                 <BlogQuery id={this.props.id} />
               </div>
             )

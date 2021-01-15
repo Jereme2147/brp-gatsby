@@ -1,0 +1,12 @@
+@import "../../styles/reset.scss";
+.main {
+    h2 {
+        font-size: 1.2rem;
+        @include desktop() {
+            font-size: 1.5rem;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}

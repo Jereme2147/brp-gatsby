@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import variables from "../variables.js"
 import styles from "./allBlogs.module.scss"
 
+
 const Bold = ({ children }) => <span className={styles.boldText}>{children}</span>
 const Text = ({ children }) => <p className="align-center">{children}</p>
 // const Picture = ({ children }) => <div>{children}</div>
@@ -89,8 +90,9 @@ const BlogQuery = ({ id }) => {
                   width: "100%",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  // justifyContent: "center",
+                  // alignItems: "center",
+                  cursor: "pointer",
                 }}
                 key={item.id}
               >
