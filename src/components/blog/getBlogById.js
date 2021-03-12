@@ -7,7 +7,7 @@ class BlogById extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            height: '40px',
+            height: '150px',
             overflow: 'hidden',
             padding: '20px 5px',
             // fontSize: '1.5rem',
@@ -20,13 +20,13 @@ class BlogById extends React.Component {
     componentWillUnmount() {
     }
     click = () => {
-        if(this.state.height === '40px'){
+        if(this.state.height === '150px'){
             this.setState({
               height: "auto"
             })
         }else {
             this.setState({
-            height: '40px',
+            height: '150px',
             overflow: 'hidden'
         })
         }

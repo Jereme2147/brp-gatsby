@@ -9,7 +9,7 @@ import Head from "../components/head.js"
 
 export const data = graphql`
          query{
-           allContentfulBlog(sort: { order: DESC, fields: date }, limit: 10) {
+           allContentfulBlog(sort: { order: DESC, fields: date }) {
              nodes {
                content {
                  json

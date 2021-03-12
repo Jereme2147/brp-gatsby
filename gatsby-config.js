@@ -31,20 +31,30 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [ 
-          {
-            family: `Muli`,
-          },
-          {
-            family: `Jaldi`,
-          },
-          {
-            family: "Molengo",
-          },
+        fonts: [
+          `Muli`,
+          `Jaldi`,
+          `Molengo`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
+        display: "swap",
       },
+      // resolve: `gatsby-plugin-prefetch-google-fonts`,
+      // options: {
+      //   fonts: [
+      //     {
+      //       family: `Muli`,
+      //     },
+      //     {
+      //       family: `Jaldi`,
+      //     },
+      //     {
+      //       family: "Molengo",
+      //     },
+      //   ],
+      // },
     },
     `gatsby-plugin-sass`,
     {
