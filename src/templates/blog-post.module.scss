@@ -1,0 +1,28 @@
+@import "../styles/reset.scss";
+
+.blogImage{
+    @include desktop(){
+        width: 300px;
+    }
+    width: 150px;
+}
+.content {
+    // @include desktop() {
+    //     margin: 20px 5px;
+    // }
+    margin: 5px 5px;
+    p {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    h1 {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        @include desktop() {
+            padding: 20px;
+        }
+        padding:20px 0;
+        text-shadow: 2px 2px 2px $white;
+    }
+}
