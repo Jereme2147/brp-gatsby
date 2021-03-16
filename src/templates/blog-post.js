@@ -8,7 +8,55 @@ import Section from "../components/section"
 import Head from "../components/head.js"
 import variables from "../components/variables.js"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import Style from "./blog-post.module.scss"
+
+const Bold = ({ children }) => <span className={Style.boldText}>{children}</span>
+const Text = ({ children }) => <p className="align-center">{children}</p>
+
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+  },
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: node => {
+      const { title, description, file } = node.data.target.fields
+      const mimeType = file["en-US"].contentType
+      const mimeGroup = mimeType.split("/")[0]
+
+      switch (mimeGroup) {
+        case "image":
+          return (
+            <img
+              title={title ? title["en-US"] : null}
+              alt={description ? description["en-US"] : null}
+              src={file["en-US"].url}
+              className={Style.imbedImage}
+            />
+          )
+        case "application":
+          return (
+            <a
+              alt={description ? description["en-US"] : null}
+              href={file["en-US"].url}
+            >
+              {title ? title["en-US"] : file["en-US"].details.fileName}
+            </a>
+          )
+        default:
+          return (
+            <span style={{ backgroundColor: "red", color: "white" }}>
+              {" "}
+              {mimeType} embedded asset{" "}
+            </span>
+          )
+      }
+    },
+  },
+}
 
 export const query = graphql`
          query($slug: String!) {
@@ -21,8 +69,10 @@ export const query = graphql`
                  ...GatsbyContentfulFluid
                }
              }
-             content {
+             childrenContentfulBlogContentRichTextNode {
                json
+               id
+               content
              }
            }
          }
@@ -37,8 +87,8 @@ const BlogPost = props => {
       <Section>
         <div className={Style.content}>
           <h1>{props.data.contentfulBlog.title}</h1>
-          <span className="meta">
-            Posted on {props.data.contentfulBlog.date}
+          <span className={Style.meta}>
+            - Posted on {props.data.contentfulBlog.date} -
           </span>
           {console.log(props.data.contentfulBlog)}
           {props.data.contentfulBlog.blogImage && (
@@ -48,7 +98,10 @@ const BlogPost = props => {
               alt={props.data.contentfulBlog.title}
             />
           )}
-          {documentToReactComponents(props.data.contentfulBlog.content.json)}
+          {documentToReactComponents(
+            props.data.contentfulBlog.childrenContentfulBlogContentRichTextNode[0].json, options
+          )}
+          {/* {documentToReactComponents(props.data.contentfulBlog.content.json)} */}
         </div>
       </Section>
     </Layout>

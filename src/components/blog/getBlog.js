@@ -58,7 +58,7 @@ const data = useStaticQuery(graphql`
         }
       }
     }
-  }
+  } 
 `)
     
     return (

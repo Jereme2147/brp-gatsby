@@ -31,7 +31,6 @@ const GetBlogImage = () => {
   return (
     <div>
     {data.allContentfulBlog.nodes.map((item) => {
-      console.log(data.allContentfulBlog.nodes[0].blogImage[0].fluid)
         if(item.blogImage) {
             return (
               <a

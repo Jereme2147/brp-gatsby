@@ -2,14 +2,17 @@
 
 .blogImage{
     @include desktop(){
-        width: 300px;
+        width: 400px;
     }
-    width: 150px;
+    width: 200px;
+    box-shadow: 2px 2px 5px $black;
 }
 .content {
     // @include desktop() {
     //     margin: 20px 5px;
     // }
+    display: flex;
+    flex-direction: column;
     margin: 5px 5px;
     p {
         font-size: 1.5rem;
@@ -25,4 +28,33 @@
         padding:20px 0;
         text-shadow: 2px 2px 2px $white;
     }
+    ul {
+        margin: 15px;
+        // border-top: 1px solid $blue;
+    }
+    ol {
+        margin: 15px;
+    }
+    img {
+        justify-content: center;
+        align-items: center;
+    }
+    span {
+        font-weight: bolder;
+        padding: 5px;
+    }
+}
+.boldText {
+    text-shadow: 1px 1px 1px $black;
+}
+.imbedImage {
+    width: 100%;
+    max-width: 600px;
+    align-self: center;
+    border-radius: 3px;
+    box-shadow: 4px 4px 2px darken($grey, 10%);
+
+}
+.meta {
+    font-size: 1rem;
 }

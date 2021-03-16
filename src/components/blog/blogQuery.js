@@ -58,7 +58,7 @@ const options = {
 const BlogQuery = ({ id }) => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlog(sort: { order: DESC, fields: date }, limit: 10) {
+      allContentfulBlog(sort: { order: DESC, fields: date }) {
         nodes {
           content {
             json
@@ -83,6 +83,7 @@ const BlogQuery = ({ id }) => {
   return (
     <div>
     {data.allContentfulBlog.nodes.map((item) => {
+      console.log("item ", item)
         if(id === item.id && item.blogImage){
             return (
               <div

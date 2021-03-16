@@ -12,8 +12,10 @@ const NavMiddle = () => {
     }
     return (
       <div className={middleStyles.container}>
-        <h1 name="format-detection" content="telephone=no">828-733-3603</h1>
-        <ul className={middleStyles.links}> 
+        <h1 name="format-detection" content="telephone=no">
+          828-733-3603
+        </h1>
+        <ul className={middleStyles.links}>
           <li>
             <Link to={"/services"} activeStyle={activeStyle}>
               <h2>Services</h2>
@@ -22,7 +24,12 @@ const NavMiddle = () => {
           <li>
             <Link to={"/"} activeStyle={activeStyle}>
               <h2>Home</h2>
-            </Link> 
+            </Link>
+          </li>
+          <li>
+            <Link to={"/blog"} activeStyle={activeStyle}>
+              <h2>Blog</h2>
+            </Link>
           </li>
           <li>
             <Link to={"/contact"} activeStyle={activeStyle}>
