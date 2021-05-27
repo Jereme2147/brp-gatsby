@@ -14,6 +14,9 @@
     display: flex;
     flex-direction: column;
     margin: 5px 5px;
+    background: $white;
+    padding: 5px;
+    border-radius: 5px;
     p {
         font-size: 1.5rem;
         margin: 10px 0;

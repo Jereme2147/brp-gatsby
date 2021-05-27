@@ -35,7 +35,10 @@ class BlogSingle extends React.Component {
         const styleContainer = {
             display: 'flex',
             flexDirection: 'column',
-            padding: `${this.state.width ? '20px 5px' : '30px 10px'}`
+            padding: `${this.state.width ? '20px 5px' : '30px 10px'}`,
+            background: `${variables.white}`,
+            marginTop: `20px`,
+            borderRadius: `5px`
         }
         const styleTitle = {
             fontSize: `${this.state.width ? '1.5rem' : '2rem'}`,
