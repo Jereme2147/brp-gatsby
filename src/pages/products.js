@@ -116,7 +116,7 @@ class Products extends React.Component {
                                             <li key={`${thing.url}LI`} style={style.innerStyle}>
                                                 {/* {console.log(thing.url)} */}
                                                 <a key={`${thing.url}A`} 
-                                                    href={thing.url} rel="noopener noreferrer">
+                                                    href={thing.url} rel="noopener noreferrer" target="__BLANK">
                                                     <h2 key={`${thing.id}${thing.name}`}>{thing.name}</h2>
                                                 </a>
                                             </li>
