@@ -17,6 +17,6 @@
          </button>
        </div>
      )
- }
+ } 
 
  export default QuickNav 

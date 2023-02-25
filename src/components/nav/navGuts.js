@@ -9,7 +9,7 @@ class NavGuts extends React.Component {
     super(props)
     this.navElement = React.createRef();
     this.state = {
-      containerStyle: {
+      containerStyle: { 
           visible: true
       }, 
     }

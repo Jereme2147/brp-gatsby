@@ -14,7 +14,7 @@ const BannerQuery = ({ banner }) => {
               ...GatsbyImageSharpFluid_withWebp
               srcSetWebp
               originalName
-            }
+            } 
           }
         }
       }

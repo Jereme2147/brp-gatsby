@@ -12,7 +12,7 @@ class Banner extends React.Component {
     }
  
     componentDidMount() {
-        this.handleWindowSizeChange() 
+        this.handleWindowSizeChange()  
         window.addEventListener('resize', this.handleWindowSizeChange)
     }
     componentWillUnmount() {

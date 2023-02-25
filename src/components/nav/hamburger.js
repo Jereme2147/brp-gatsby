@@ -12,7 +12,7 @@ class Hamburger extends React.Component {
       burgerClass: [hamburgerStyles.hamburger, hamburgerStyles.minus],
       isShowing: false,
     }
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this) 
   }
   handleClick = () => {
     if (this.state.burgerClass.length === 2 ){

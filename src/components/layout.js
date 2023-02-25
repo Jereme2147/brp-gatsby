@@ -12,7 +12,7 @@ class Layout extends React.Component {
     constructor(props){
         super(props);
         this.navElement = React.createRef();
-        this.state = {
+        this.state = { 
             
         }
     }
@@ -38,6 +38,6 @@ class Layout extends React.Component {
             </div> 
         )
     }
-}
+} 
 
 export default Layout;

@@ -34,7 +34,7 @@ const NavMiddle = () => {
           <li>
             <Link to={"/contact"} activeStyle={activeStyle}>
               <h2>Contact</h2>
-            </Link>
+            </Link> 
           </li>
           <li>
             <Link to={"/products"} activeStyle={activeStyle}>
